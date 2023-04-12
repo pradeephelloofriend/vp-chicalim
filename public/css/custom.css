@@ -5591,7 +5591,7 @@ button.close {
 
 /*about-us-tab*/
 .about-us-tab .ant-tabs-tab{
-  background: #ffffff;
+  background: #28375f;
   padding: 8px 70px 8px 9px ;
 }
 .about-us-tab .ant-tabs > .ant-tabs-nav, .ant-tabs > div > .ant-tabs-nav {
@@ -5604,14 +5604,14 @@ button.close {
 }
 .about-us-tab .ant-tabs-tab.ant-tabs-tab-active {
   color: #fff;
-  background-color: #7f7544;
-  
+  /* background-color: #7f7544; */
+  background-color: #BAD7E9;
 }
 .about-us-tab .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
-  color: #fff;
+  color: #28375f;
 }
 .about-us-tab .ant-tabs-tab-btn{
-  color: #7f7544;
+  color: #ffffff;
 }
 .about-us-tab .ant-tabs-tab-btn:after {
   content: "\f105";
@@ -5749,7 +5749,8 @@ margin-bottom: 18px;
 }
 
 .scheme-block .ant-table-thead > tr > th{
-  background: #7f7544;
+  /* background: #7f7544; */
+  background: #28375f;
   padding: 7px 12px;
   font-weight: 600;
   color: #fff;
@@ -5824,12 +5825,14 @@ background-size:cover;
 }
 
 .vil-card-block .vil-card-text {
+  padding: 30px 0px 30px 0px;
   text-align: center;
   /* margin-top: 6%;
   margin-bottom: 6%; */
 }
 
 .vil-card-block .vil-card-text h1{
+  margin: 10px 0px 0px 0px;
   font-weight: 700;
   font-size: 40px;
 }
@@ -6075,6 +6078,7 @@ border: 0px;
 
 .news-links {
   background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: white;
   border: 2px solid #28375f;
   margin: 15px 0px 15px 0px;
   /* padding: 10px; */
@@ -6085,4 +6089,12 @@ border: 0px;
   position: relative;
   color: #ffffff !important;
   top:7px
+}
+
+.fa-size {
+  font-size: 50px !important;
+}
+
+.sp-c {
+  color: white !important;
 }

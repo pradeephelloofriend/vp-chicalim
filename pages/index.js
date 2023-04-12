@@ -106,7 +106,7 @@ const Index = ({ homeData,msgData,setServiceAreaData,data,villageData,setSchemeA
             <OtherLinksComponent/> 
             <PopulationSectionComponent/>
             <FacilitesComponent/>
-            <Schemes schemesData={schemesData}/>
+            <Schemes/>
             {/*<AddBlock stepData={stepData} />
             <Scheme schemeData={data1} />
             <EventsComponent eventdata={eventdata}/>

@@ -216,30 +216,36 @@ const NewsSectionComponent = ({setTabKey,devData}) => {
                                 <div className='vil-card-block'>
                                   <div className="row">
                                     <div className="col-md-4 col-xl-4 vil-card-text">
+                                        <a href="#" target="_blank"><i className="fa fa-gavel fa-size" aria-hidden="true"></i></a>
                                         <h1>0 </h1>
                                         <p>Tenders floated</p>
                                     </div>
                                     <div className="col-md-4 col-xl-4 vil-card-text">
+                                        <a href="#" target="_blank"><i className="fa fa-camera fa-size" aria-hidden="true"></i></a>
                                         <h1>0 </h1>
-                                        <p>Tenders floated</p>
+                                        <p>Events planned</p>
                                     </div>
                                     <div className="col-md-4 col-xl-4 vil-card-text">
+                                      <a href="#" target="_blank"><i className="fa fa-pie-chart fa-size" aria-hidden="true"></i></a>
                                         <h1>0 </h1>
-                                        <p>Tenders floated</p>
+                                        <p>RTI received</p>
                                     </div>
                                   </div>
                                   <div className="row">
                                     <div className="col-md-4 col-xl-4 vil-card-text">
+                                      <a href="#" target="_blank"><i className="fa fa-thumbs-up fa-size" aria-hidden="true"></i></a>
                                         <h1>0 </h1>
-                                        <p>Tenders floated</p>
+                                        <p>Grants received</p>
                                     </div>
                                     <div className="col-md-4 col-xl-4 vil-card-text">
+                                      <a href="#" target="_blank"><i className="fa fa-tasks fa-size" aria-hidden="true"></i></a>
                                         <h1>0 </h1>
-                                        <p>Tenders floated</p>
+                                        <p>Projects</p>
                                     </div>
                                     <div className="col-md-4 col-xl-4 vil-card-text">
+                                        <a href="#" target="_blank"><i className="fa fa-money fa-size" aria-hidden="true"></i></a>
                                         <h1>0 </h1>
-                                        <p>Tenders floated</p>
+                                        <p>Fee and Taxes</p>
                                     </div>
                                   </div>
                                   

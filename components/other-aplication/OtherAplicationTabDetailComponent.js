@@ -83,7 +83,7 @@ const OtherAplicationTabDetailComponent = ({regCertData,cDetailData}) => {
                                     className='faci-card'
                                     hoverable
                                 >
-                                    <h4 className='link-c-blue mb-0'>{m.manuName}</h4>
+                                    <h4 className='link-disp-blue mb-0'>{m.manuName}</h4>
                                     <p className='mb-0'>{m.menuDesc}</p>
                                     <div className='btn-block mt-3 f-right'>
                                         {m.menuButton.map((b,bix)=>

@@ -38,7 +38,7 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
                                         }
                                         >
                                             <div className='dev-slider-box'>
-                                            <span className="badge bg-white link-c-blue rounded-pill">{d.categoryName.name}</span>
+                                            <span className="badge bg-white link-disp-blue rounded-pill">{d.categoryName.name}</span>
                                             </div>
                                         </Card>
                                     </div>
