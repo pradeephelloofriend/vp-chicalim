@@ -10,14 +10,37 @@ import SwiperCore, {
   Pagination
 } from 'swiper';
 import SliderBottomBarComponent from './SliderBottomBarComponent';
+import { getSliderHomeData } from '../../lib/api';
 
 const {Title,Text}=Typography
 SwiperCore.use([Pagination]);
 
-const Banner = ({sliderData,noticeData}) => {
-  console.log('sliderdata',sliderData)
+const Banner = ({sliderData}) => {
+  // console.log('sliderdata',sliderData)
   //const Demo= sliderData.content.map(i=>i)
   //console.log('demo',Demo)
+  const [slData,setSldata]=React.useState(null)
+   
+    React.useEffect(()=>{
+        //setLoading(true)
+        let isApiSubscribed = true;
+        async function fetchData() {
+            
+            const cData = await getSliderHomeData() //applo client   
+            // 👇️ only update state if component is mounted
+            if (isApiSubscribed) {
+              console.log('cData',cData)
+              setSldata(cData)
+            }
+          }
+         
+          fetchData()
+          return () => {
+            // cancel the subscription
+            isApiSubscribed = false;
+          };
+    },[])
+
     return (
       <>
        <section className="wrapper ">
@@ -64,19 +87,19 @@ const Banner = ({sliderData,noticeData}) => {
                 <Swiper spaceBetween={30} pagination={{
                   "clickable": true
                 }} className="mySwiper">
-                  {sliderData.map((i, index) =>
+                  {slData !==null ? slData.map((i, index) =>
                     <SwiperSlide key={index}>
                       <img
                         alt="s1"
 
-                        src={i.image.url}
+                        src={i.image.sourceUrl}
                       />
                       <div className="crousel_content container">
                         {/*<Title level={2} className="text-white">{i.caption_small}</Title>
                   <Title level={4} className="text-white mt-1">{i.caption_big}</Title>*/}
                       </div>
                     </SwiperSlide>
-                  )}
+                  ):<></>}
                 </Swiper>
               </div>
               {/* <div className='col-5'>

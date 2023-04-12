@@ -39,14 +39,7 @@ export async function getServerSideProps() {
       }
     })
     const schemesData = await schemes.json()
-    const notice = await fetch(`${process.env.WP_API_PATH}notices`,{
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${process.env.JWT_TOKEN}` 
-        }
-      })
-    const noticeData = await notice.json()
+    
     /****** */
     const news = await fetch(`${process.env.WP_API_PATH}news_letter?per_page=5`,{
       method: 'GET',
@@ -86,9 +79,9 @@ const dev = await fetch(`${process.env.WP_API_PATH}development?per_page=20`,{
 const devData = await dev.json()
     //BIND RETURN DATA THROUGH PROPS
     //-----------------------------------
-    return { props: {homeData,noticeData,schemesData,newsData,villageData,msgData,devData} }
+    return { props: {homeData,schemesData,newsData,villageData,msgData,devData} }
 }
-const Index = ({ homeData,msgData,setServiceAreaData,data,villageData,setSchemeAreaData,devData,noticeData,schemesData,newsData}) => {
+const Index = ({ homeData,msgData,setServiceAreaData,data,villageData,setSchemeAreaData,devData,schemesData,newsData}) => {
     console.log('pdata=',homeData)
     React.useEffect(() => {
         setServiceAreaData(data)
@@ -100,15 +93,16 @@ const Index = ({ homeData,msgData,setServiceAreaData,data,villageData,setSchemeA
     return (
         <>
             {/* <OtherLinks noticeData={noticeData}/> */}
-            <OtherLinks noticeData={noticeData} />
+            {/* <OtherLinks /> */}
             {/* <Banner sliderData={slider} noticeData={noticeData} /> */}
-            <Sliderbanner sliderData={slider} noticeData={noticeData} />
-            <Banner sliderData={slider} noticeData={noticeData} />
+            <Sliderbanner/>
+            <OtherLinks />
+            <Banner />
             {/* <BigMenuComponent/> */}
            
             {/*<AboutUsBlockComponent villageData={villageData} msgData={msgData}/>*/}
             <ProfileComponent/>
-            <NewsSectionComponent newsData={newsData} devData={devData}/>
+            <NewsSectionComponent devData={devData}/>
             <OtherLinksComponent/> 
             <PopulationSectionComponent/>
             <FacilitesComponent/>

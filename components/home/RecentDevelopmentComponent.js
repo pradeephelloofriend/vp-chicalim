@@ -24,7 +24,7 @@ class RecentDevelopmentComponent extends React.Component {
   }
   render(){
     const {devData}=this.props
-    console.log('devData',devData)
+    // console.log('devData new',devData)
     const settings = {
       dots: false,
       infinite: true,

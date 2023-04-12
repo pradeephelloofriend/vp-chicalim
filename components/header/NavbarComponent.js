@@ -9,8 +9,6 @@ import { withRouter } from 'next/router';
 import MenuItemComponent from './MenuItemComponent';
 import LogoNavbarComponent from './LogoNavbarComponent';
 import TopHeaderAreaComponent from './TopHeaderAreaComponent';
-import NavbarSecondComponent from './NavbarSecondComponent'; 
-import MenuItemSecondComponent from './MenuItemSecondComponent';
 
 class NavbarComponent extends Component {
     
@@ -76,9 +74,10 @@ class NavbarComponent extends Component {
         //console.log("server",data)
         return (
             <>
+            <TopHeaderAreaComponent/>
             <LogoNavbarComponent/>
             {/* <TopHeaderAreaComponent/> */}
-            <TopHeaderAreaComponent/>
+            
             {/* <NavbarSecondComponent/> */}
             <Navbar className={bg} hidden={nav} collapseOnSelect sticky={sticky} expand="lg">
                 <Container>
