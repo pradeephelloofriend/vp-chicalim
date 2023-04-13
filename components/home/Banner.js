@@ -11,6 +11,7 @@ import SwiperCore, {
 } from 'swiper';
 import SliderBottomBarComponent from './SliderBottomBarComponent';
 import { getSliderHomeData } from '../../lib/api';
+import abt1 from '../../public/img/abtus1a.png'
 
 const {Title,Text}=Typography
 SwiperCore.use([Pagination]);
@@ -52,12 +53,12 @@ const Banner = ({sliderData}) => {
                   <div className='slider-block  '>
                     <div class="caption1">
                       <h1>About </h1>
-                      <h2>Village Panchayat Birondem</h2>
+                      <h2>Village Panchayat Chicalim</h2>
                     </div>
                     <div className='slider-content'>
-                      <p>Birondem village is located in Satari taluka of North Goa district in Goa, India. It is situated 8km away from sub-district headquarter Valpoi (tehsildar office) and 61km away from district headquarter Panaji. As per 2009 stats, Birondem village is also a gram panchayat.</p>
-                      <p>The total geographical area of village is 277.56 hectares. Birondem has a total population of 476 peoples, out of which male population is 244 while female population is 232. Literacy rate of birondem village is 81.51% out of which 86.48% males and 76.29% females are literate. There are about 126 houses in birondem village. Pincode of birondem village locality is 403506.</p>
-                      <p>When it comes to administration, Birondem village is administrated by a sarpanch who is elected representative of the village by the local elections. As per 2019 stats, Birondem village comes under Poriem assembly constituency & North Goa parliamentary constituency. Satari is nearest town to birondem village for all major economic activities.</p>
+                      <p>The Village Panchayat of Chicalim is situated in Mormugao Taluka of South Goa District and it consists of three revenue Village i.e. Chicalim, Dabolim & Sao Jacinto Island. Chicalim is a beautiful village; one often comes to this pleasant village while on the way to or from the Dabolim International Airport.</p>
+                      <p>Here one can see the Village scene of Goa and also the culture of Goa. On the way also one can see the St. Hyacinthi Cathedral church which is also known by public in the name by St. Jacinto Church located on the on exotic Sao Jacinto Island. Also there exists an old chapel at Sao Jacinto Island that has an underground tunnel to the other side of the river to St. Domnic Chapel, Siridao. On the island you can also see a well preserved old Portuguese light house, from the top of which one can enjoy the breathtakingly beautiful view on to the Indian ocean and the Goa Coast. Most of the Island is covered with forest; therefore the island still has preserved the purity and its natural charm Another Light House is situated at Alto Chicalim.</p>
+                      <p>There is Church in Chicalim that is old & ancient known as the St. Francis Xavier Church, which celebrates the feast of St. Francis Xavier and Mary Immaculate in the month of December. One can also see the Palloti Retreat House here that holds the feast of its patron on 22nd January and Harvest Festival is celebrated on 24th August of Every year. There are two Menlingtas Caves/(Buyar) located near Post Office at Naquelim-Chicalim Goa, and Monument of Our Lady of Regina Mundi is situated Near Regina Mundi High School. There is also a temple located at Alto Chicalim known as Shri. Sateri Devasthan and Masjid near M.E.S. College.</p>
                       <Divider />
                        {/* <div className='slider-help'>
                         <div className='row'>
@@ -83,7 +84,28 @@ const Banner = ({sliderData}) => {
 
               </div>
 
+
               <div className='col-lg-6 col-md-6 col-sm-6'>
+                <Swiper spaceBetween={30} pagination={{
+                  "clickable": true
+                }} className="mySwiper">
+                    <SwiperSlide>
+                      <Image
+                        alt="s1"
+
+                        src={abt1}
+                      />
+                      <div className="crousel_content container">
+                        {/*<Title level={2} className="text-white">{i.caption_small}</Title>
+                  <Title level={4} className="text-white mt-1">{i.caption_big}</Title>*/}
+                      </div>
+                    </SwiperSlide>
+                </Swiper>
+              </div>
+
+
+
+              {/* <div className='col-lg-6 col-md-6 col-sm-6'>
                 <Swiper spaceBetween={30} pagination={{
                   "clickable": true
                 }} className="mySwiper">
@@ -97,11 +119,18 @@ const Banner = ({sliderData}) => {
                       <div className="crousel_content container">
                         {/*<Title level={2} className="text-white">{i.caption_small}</Title>
                   <Title level={4} className="text-white mt-1">{i.caption_big}</Title>*/}
-                      </div>
+                      {/* </div>
                     </SwiperSlide>
                   ):<></>}
                 </Swiper>
-              </div>
+              </div> */} 
+
+
+
+
+
+
+
               {/* <div className='col-5'>
                 <div className='pub-msg'>
                   <div className='pub-img'>
