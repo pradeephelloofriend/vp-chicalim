@@ -83,10 +83,10 @@ const OtherLinks = () => {
                                     {/* <p>hello</p> */}
                                 </li>
                                 <li>
-                                    <span onClick={()=> window.open("https://users.vpnagoasalcetegoa.com","_blank")}>
+                                    <span onClick={()=> window.open("https://chicalim-user.netlify.app/","_blank")}>
                                     <HomeOutlined />
                                     </span>
-                                    <a onClick={()=> window.open("https://users.vpnagoasalcetegoa.com","_blank")}>House Tax</a>
+                                    <a onClick={()=> window.open("https://chicalim-user.netlify.app/","_blank")}>House Tax</a>
                                 </li>
                             </ul>
                         </div>
