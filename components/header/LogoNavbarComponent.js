@@ -3,6 +3,7 @@ import Image from 'next/image'
 import {Space,Typography} from 'antd'
 import logo from '../../public/img/logo.png'
 import cm from '../../public/img/cm-logo.png'
+import mj from '../../public/img/mauvin.png'
 const {Title,Text}=Typography
 const LogoNavbarComponent = () => {
   return (
@@ -27,7 +28,8 @@ const LogoNavbarComponent = () => {
                 <Title level={5}>Shri Pramod Sawant</Title>
                 <Text>Hon'ble Chief Minister</Text>
             </div>
-            <Image src={'https://res.cloudinary.com/depg2aab2/image/upload/v1665068914/vp/nagoa/cm-logo_ne1c94.png'} height={100} width={80} alt="Village Panchayats"/>
+            {/* <Image src={'https://res.cloudinary.com/depg2aab2/image/upload/v1665068914/vp/nagoa/cm-logo_ne1c94.png'} height={100} width={80} alt="Village Panchayats"/> */}
+            <Image src={mj} height={100} width={95} alt="Village Panchayats"/>
             
             </Space>
         </div>

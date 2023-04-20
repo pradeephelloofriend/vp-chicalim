@@ -10,7 +10,7 @@ const village = () => {
   const router=useRouter()
     
     const tempTitle=router.query.title;
-    //console.log('router',tempTitle)
+    console.log('router',router)
   return (
     <>
     

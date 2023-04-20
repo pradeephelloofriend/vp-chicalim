@@ -29,11 +29,11 @@ const TopHeaderAreaComponent = ({setRegStatus,cUser}) => {
                                 
                                     <a href="tel:+822456974" className="me-xl-8 text-dblue">
                                     <i className="fa fa-mobile me-xl-1"></i>
-                                        Call Us For Inquiry: +91 86688 67032
+                                        Call Us For Inquiry: 0832-2540226
                                     </a>
                                     <a href="mailto:hello@surety.com" className="me-xl-8 text-dblue">
                                     <i className="fa fa-envelope-o me-xl-1"></i>
-                                        Email: contactus@vpdongurlithane.com
+                                        Email: vpchicalim@gmail.com
                                     </a>
                                     {cUser!==null?
                                     <a href="#" onClick={()=>handleShow()} className="text-red">
@@ -41,7 +41,7 @@ const TopHeaderAreaComponent = ({setRegStatus,cUser}) => {
                                         Log Out
                                     </a>
                                     :
-                                    <a href="#" onClick={()=> window.open("https://users.vpnagoasalcetegoa.com","_blank")} className="text-white">
+                                    <a href="#" onClick={()=> window.open("https://chicalim-user.netlify.app/","_blank")} className="text-white">
                                     <i className="fa fa-user-o me-xl-1"></i>
                                         Login/Register
                                     </a>

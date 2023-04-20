@@ -17,21 +17,21 @@ const ProfileComponent = () => {
           <Card >
             <Card.Body>
             <div className='pf-content-block '>
-            <h4 class="display-6 mb-0 text-white">Dongurli-Thane Profile</h4>
+            <h4 class="display-6 mb-0 text-white">Chicalim Profile</h4>
               <Card className='display-c1'>
                 <Card.Body>
                   <ul className='pf-ul text-white mt-3'>
                     <li>Block / Taluka :
-                      <p>Satari</p>
+                      <p>Mormugao</p>
                     </li>
                     <li>District :
-                      <p>North Goa</p>
+                      <p>South Goa</p>
                     </li>
                     <li>State :
                       <p>Goa</p>
                     </li>
                     <li>Pincode :
-                      <p>403506</p>
+                      <p>403711</p>
                     </li>
                   </ul>
                 </Card.Body>

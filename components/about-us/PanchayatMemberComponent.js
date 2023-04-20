@@ -47,10 +47,10 @@ const PanchayatMemberComponent = () => {
                         <div className='team-content-block'>
                         <div className="team-block">
                             <div className="team-image">
-                                <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1670563789/vp/dongrim/team/dong-sarpanch-min_u6tdkd.jpg'} alt=""  />
+                                <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
                             </div>
                             <div className="team-content">
-                                <p className="darkGrey">Sarita Fatgo Gaonkar</p>
+                                <p className="darkGrey">KAMALAPRASAD JAGANNATH YADAV</p>
                                 <p className="grey">
                                 Sarpanch  </p>
                             </div>
@@ -64,10 +64,10 @@ const PanchayatMemberComponent = () => {
                             <div className='team-content-block'>
                                 <div className="team-block">
                                     <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671104555/vp/dongrim/team/image_1_gu4x1o.jpg'} alt=""  />
+                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
                                     </div>
                                     <div className="team-content">
-                                        <p className="darkGrey">Nilesh S. parwar</p>
+                                        <p className="darkGrey">MARIA JOAO MASCARENHAS</p>
                                         <p className="grey">
                                         Member </p>
                                     </div>
@@ -83,12 +83,12 @@ const PanchayatMemberComponent = () => {
                             <div className='team-content-block'>
                                 <div className="team-block">
                                     <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671166873/vp/dongrim/team/Untitled-1_jzwlen.jpg'} alt=""  />
+                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
                                     </div>
                                     <div className="team-content">
-                                        <p className="darkGrey">Tanaya T. Gaonkar</p>
+                                        <p className="darkGrey">NEELAM AVDUTH NAIK</p>
                                         <p className="grey">
-                                        dy sarpanch  </p>
+                                        Member  </p>
                                     </div>
                                 </div>
                             </div>
@@ -97,17 +97,36 @@ const PanchayatMemberComponent = () => {
                             
                         </TreeNode>
 
-                    
                         <TreeNode label={
                         <div>
                             <Button className='team-level'>Ward 3</Button>
                             <div className='team-content-block'>
                                 <div className="team-block">
                                     <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={' https://res.cloudinary.com/depg2aab2/image/upload/v1671104553/vp/dongrim/team/image_3_ijapfh.jpg'} alt=""  />
+                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
                                     </div>
                                     <div className="team-content">
-                                        <p className="darkGrey">Suresh Kashinath Ainkar</p>
+                                        <p className="darkGrey">SUNITADEVI KAMALAPRASAD YADAV</p>
+                                        <p className="grey">
+                                        Member  </p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        }>
+                        </TreeNode>
+
+                    
+                        <TreeNode label={
+                        <div>
+                            <Button className='team-level'>Ward 4</Button>
+                            <div className='team-content-block'>
+                                <div className="team-block">
+                                    <div className="team-image">
+                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
+                                    </div>
+                                    <div className="team-content">
+                                        <p className="darkGrey">DATTAPRASAD LAXMAN BANDODKAR</p>
                                         <p className="grey">
                                         Member  </p>
                                     </div>
@@ -124,12 +143,12 @@ const PanchayatMemberComponent = () => {
                             <div className='team-content-block'>
                                 <div className="team-block">
                                     <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671104553/vp/dongrim/team/image_4_ydkehp.jpg'} alt=""  />
+                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
                                     </div>
                                     <div className="team-content">
-                                        <p className="darkGrey">Vinayak Uttam Gawas</p>
+                                        <p className="darkGrey">KAMALAPRASAD JAGANNATH YADAV</p>
                                         <p className="grey">
-                                        Member  </p>
+                                        Sarpanch  </p>
                                     </div>
                                 </div>
                             </div>
@@ -143,10 +162,10 @@ const PanchayatMemberComponent = () => {
                             <div className='team-content-block'>
                                 <div className="team-block">
                                     <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671104553/vp/dongrim/team/image_6_pj401y.jpg'} alt=""  />
+                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
                                     </div>
                                     <div className="team-content">
-                                        <p className="darkGrey">Anushka Anant Gawas</p>
+                                        <p className="darkGrey">SAPNA SHIVAJI KURADE</p>
                                         <p className="grey">
                                             Member  </p>
                                     </div>
@@ -163,10 +182,10 @@ const PanchayatMemberComponent = () => {
                             <div className='team-content-block'>
                                 <div className="team-block">
                                     <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671104553/vp/dongrim/team/image_2_cej3l0.jpg'} alt=""  />
+                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
                                     </div>
                                     <div className="team-content">
-                                        <p className="darkGrey">Subhash Gawade</p>
+                                        <p className="darkGrey">Shailesh Mayekar</p>
                                         <p className="grey">
                                             Member  </p>
                                     </div>
@@ -183,10 +202,10 @@ const PanchayatMemberComponent = () => {
                             <div className='team-content-block'>
                                 <div className="team-block">
                                     <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671104554/vp/dongrim/team/image_7_fngzoq.jpg '} alt=""  />
+                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
                                     </div>
                                     <div className="team-content">
-                                        <p className="darkGrey">Suchita Premkumar Gaonkar </p>
+                                        <p className="darkGrey">FRANCISCO JOSE DIOGO FRANCISCO NUNES </p>
                                         <p className="grey">
                                             Member  </p>
                                     </div>
@@ -203,10 +222,10 @@ const PanchayatMemberComponent = () => {
                             <div className='team-content-block'>
                                 <div className="team-block">
                                     <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671104553/vp/dongrim/team/image_5_lwsguv.jpg'} alt=""  />
+                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
                                     </div>
                                     <div className="team-content">
-                                        <p className="darkGrey">Sonia Santosh Gaonkar</p>
+                                        <p className="darkGrey">POONAM DATTA CHARI</p>
                                         <p className="grey">
                                             Member  </p>
                                     </div>
@@ -215,6 +234,43 @@ const PanchayatMemberComponent = () => {
                             </div>
                         }>
                             
+                        </TreeNode>
+
+                        <TreeNode label={
+                            <div>
+                                <Button className='team-level'>Ward 10</Button>
+                                <div className='team-content-block'>
+                                    <div className="team-block">
+                                        <div className="team-image">
+                                            <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt="" />
+                                        </div>
+                                        <div className="team-content">
+                                            <p className="darkGrey">AISHWARYA ARVIND KORGAONKAR</p>
+                                            <p className="grey">Dy-Sarpanch  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }>
+                        </TreeNode>
+
+                        <TreeNode label={
+                            <div>
+                                <Button className='team-level'>Ward 11</Button>
+                                <div className='team-content-block'>
+                                    <div className="team-block">
+                                        <div className="team-image">
+                                            <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt="" />
+                                        </div>
+                                        <div className="team-content">
+                                            <p className="darkGrey">ROMAN FRANCISCO VAZ</p>
+                                            <p className="grey">
+                                                Member  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }>
                         </TreeNode>
 
 
@@ -228,7 +284,7 @@ const PanchayatMemberComponent = () => {
                                 <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
                             </div>
                             <div className="team-content">
-                                <p className="darkGrey">Sarvesh R. Gaonkar</p>
+                                <p className="darkGrey">Amrit Sakhalkar</p>
                                 <p className="grey">
                                 Secretary  </p>
                             </div>

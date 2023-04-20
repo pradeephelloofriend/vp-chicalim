@@ -121,7 +121,7 @@ const Schemes=({setLoading})=> {
                         </a>
                         
                         <div className='dev-slider-box'>
-                          <span className="badge bg-white link-c-blue rounded-pill">{d.schemes.title}</span>
+                          <span className="badge bg-white link-disp-blue rounded-pill">{d.schemes.title}</span>
                         </div>
                       </Figure>
                     </div>

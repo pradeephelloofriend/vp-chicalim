@@ -81,7 +81,7 @@ class RecentDevelopmentComponent extends React.Component {
               cover={<Image src={d.acf.image.url} alt='' height={427} width={518} />}
             >
               <div className='dev-slider-box rd-badge'>
-                <span className="badge bg-white link-c-blue rounded-pill">{d.acf.title}</span>
+                <span className="badge bg-white link-disp-blue rounded-pill">{d.acf.title}</span>
               </div>
             </Card>
           </div>

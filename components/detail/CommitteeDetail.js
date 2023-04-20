@@ -16,7 +16,7 @@ const { Panel } = Collapse;
 const { TabPane } = Tabs;
 
 const CommitteeDetail = ({regCertData,cDetailData}) =>{
-  console.log('cDetailData',cDetailData)
+  console.log('cDetailData answer',cDetailData)
     const{members}=cDetailData
     const [show,setShow]=React.useState(false)
     const[regData,setRegData]=React.useState(null)
@@ -87,13 +87,15 @@ const CommitteeDetail = ({regCertData,cDetailData}) =>{
 
                   <TabPane tab="Application" key="app"> */}
                       <div className='page-content'>
+                        {/* <h4>{cDetailData.desc}</h4> */}
+                        <div className='sp-cm' dangerouslySetInnerHTML={{ __html:cDetailData.desc!==null?cDetailData.desc:<></>}} />
                       {/* <div dangerouslySetInnerHTML={{ __html:cDetailData.title!==null?cDetailData.title:<></>}} /> */}
                       <table>
                         <thead>
                           <tr>
-                            <td className='fw-bolder fs-20'>Name</td>
-                            <td className='text-center fw-bolder fs-20'>Designation</td>
-                            <td className='text-center fw-bolder fs-20'>Contact No.
+                            <td className='fw-bolder fs-20 fs-clr' style={{textAlign:'center'}}>Name</td>
+                            <td className='text-center fw-bolder fs-20 fs-clr' style={{textAlign:'center'}}>Designation</td>
+                            <td className='text-center fw-bolder fs-20 fs-clr' style={{textAlign:'center'}}>Contact No.
 
                             </td>
                           </tr>
@@ -103,9 +105,9 @@ const CommitteeDetail = ({regCertData,cDetailData}) =>{
                           
                             <tbody>
                               <tr>
-                                <td className='fs-15'>{m.name}</td>
-                                <td className='px-10 fs-15'>{m.designation}</td>
-                                <td className='text-centre fs-15'>{m.contactNo}</td>
+                                <td className='fs-15' style={{textAlign:'center'}}>{m.name}</td>
+                                <td className='px-10 fs-15' style={{textAlign:'center'}}>{m.designation}</td>
+                                <td className='text-centre fs-15' style={{textAlign:'center'}}>{m.contactNo}</td>
 
                               </tr>
                             </tbody>

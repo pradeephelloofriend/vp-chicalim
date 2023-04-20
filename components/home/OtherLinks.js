@@ -1,6 +1,6 @@
 import React from 'react'
 import Marquee from "react-fast-marquee";
-import { NotificationOutlined, HomeOutlined} from '@ant-design/icons';
+import { NotificationOutlined, HomeOutlined, ProjectOutlined, TeamOutlined, FormOutlined, BookOutlined, LikeOutlined, AuditOutlined} from '@ant-design/icons';
 import { getNoticeHomeData } from '../../lib/api';
 import { useRouter } from 'next/router'
 import { setTabKey } from '../../redux/menu/menuAction';
@@ -74,12 +74,47 @@ const OtherLinks = () => {
                     <div className='col-md-6 news-links'>
                         <div className="kam-topbar-left  align-items-center">
                             <ul className='sm-btm-right d-flex justify-content-between'>
-
+                                            
+                                <li>
+                                    <span>
+                                    <AuditOutlined />
+                                    </span>
+                                    <a>Admin & Audit</a>
+                                    {/* <p>hello</p> */}
+                                </li>
+                                <li>
+                                    <span>
+                                        <LikeOutlined />
+                                    </span>
+                                    <a>Grants Received</a>
+                                    {/* <p>hello</p> */}
+                                </li>
+                                <li>
+                                    <span>
+                                        <BookOutlined />
+                                    </span>
+                                    <a>Tenders</a>
+                                    {/* <p>hello</p> */}
+                                </li>
                                 <li onClick={() =>goToPage('about-us/panchayat-members','panchayat-members','Panchayat Members','About Us','/panchayat-members/','Yes')}>
                                 <span>
-                                    <HomeOutlined />
+                                    <FormOutlined />
                                     </span>
-                                    <a>House Tax</a>
+                                    <a>Applications</a>
+                                    {/* <p>hello</p> */}
+                                </li>
+                                <li>
+                                <span>
+                                    <TeamOutlined />
+                                    </span>
+                                    <a>Members</a>
+                                    {/* <p>hello</p> */}
+                                </li>
+                                <li>
+                                <span>
+                                    <ProjectOutlined />
+                                    </span>
+                                    <a>Projects</a>
                                     {/* <p>hello</p> */}
                                 </li>
                                 <li>

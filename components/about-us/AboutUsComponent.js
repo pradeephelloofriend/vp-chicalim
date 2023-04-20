@@ -17,6 +17,8 @@ import RegionComponent from './RegionComponent';
 import TaxesComponent from './TaxesComponent';
 import ObligationComponent from './ObligationComponent';
 import PowerComponent from './PowerComponent';
+import HousetaxtestComponent from '../housetaxtest/HousetaxtestComponent';
+// import HousetaxtestComponent from './HousetaxtestComponent';
 
 const PmComponent = dynamic(
   () => import("./PanchayatMemberComponent"),
@@ -70,7 +72,7 @@ const AboutUsComponent = ({routeTitle,menuData,tabKey,setTabKey}) => {
           window.addEventListener('resize', handleResize)
 
     },[menuData,routeTitle])
-    //console.log('mData',mData)
+    console.log('mData',mData)
 
    const {title}= router.query
   return (
@@ -101,6 +103,8 @@ const AboutUsComponent = ({routeTitle,menuData,tabKey,setTabKey}) => {
                           <ObligationComponent />
                           :t.node.route.code == 'power_duties'?
                           <PowerComponent />
+                          :t.node.route.code == 'house-tax-test'?
+                          <HousetaxtestComponent />
                           :
                           <TabDetailsComponent/>
                         }

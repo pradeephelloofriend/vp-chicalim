@@ -72,7 +72,7 @@ const DetailComponent = ({regCertData,cDetailData}) =>{
       //setRegStatus(false)
     };   
   //console.log('cDetailData',cDetailData)
-    //console.log('applicationTab.cardMenuBox',applicationTab.cardMenuBox)
+    console.log('applicationTab.cardMenuBox new',applicationTab.cardMenuBox)
 
 
   return (
@@ -99,6 +99,7 @@ const DetailComponent = ({regCertData,cDetailData}) =>{
                                     <div className='btn-block mt-3 f-right'>
                                         {m.menuButton.map((b,bix)=>
                                             <a key={bix} href={`${b.btnLink}`}> <Button className='view-btn mr-5'>{b.btnName}</Button></a>
+                                            
                                         )}
                                     {mix==0?
                                     
@@ -107,6 +108,9 @@ const DetailComponent = ({regCertData,cDetailData}) =>{
                                     <></>
                                     }
                                         
+                                    </div>
+                                    <div className='btn-block mt-3'>
+                                    <Button onClick={() => handleShow()}  className='view-btn'>Upload Offline</Button>
                                     </div>
 
                                 </Card>

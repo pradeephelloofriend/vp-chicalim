@@ -7,7 +7,17 @@ import lib from '../../public/img/facility/lib.jpg'
 import news from '../../public/img/facility/news.jpg'
 
 import sports from '../../public/img/about/ground.jpg'
-
+import c1a from '../../public/img/cards/Card1a.png'
+import c2a from '../../public/img/cards/Card2a.png'
+import c3a from '../../public/img/cards/Card3a.png'
+import c4a from '../../public/img/cards/Card4a.png'
+import c5a from '../../public/img/cards/Card5a.png'
+import c6a from '../../public/img/cards/Card6a.png'
+import c7a from '../../public/img/cards/Card7a.png'
+import c8a from '../../public/img/cards/Card8a.png'
+import c9a from '../../public/img/cards/Card9a.png'
+import c10a from '../../public/img/cards/Card10a.png'
+import c11a from '../../public/img/cards/Card11a.png'
 
 import Com from '../../public/img/about/nagoa.jpg'
 const FacilitesComponent = () => {
@@ -63,40 +73,39 @@ const FacilitesComponent = () => {
                       <div className="col-md-12 mx-auto">
                           <div className='facility-tab'>
                               <Tabs tabPosition={tabLayout}>
-                                  <TabPane tab="Biodiversity" key="3">
+                                  <TabPane tab="Temples, Churches & Mosques" key="3">
                                       <div className='row'>
                                             <div className='col-md-4 col-12'>
                                                 <Card 
-                                                    title="Goa Flora" className='faci-card link-ct-blue mb-0 text-center'
+                                                    title="St. Francis Xavier Church" className='faci-card link-ct-blue mb-0 text-center'
                                                     hoverable
                                                     style={{ width: imgWidth }}
-                                                    cover={<Image alt="example" src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671514627/vp/dongrim/facility/flora_onxab0.jpg'} width={350} height={197} />}
+                                                    cover={<Image alt="example" src={c1a}/>}
                                                 >
                                                     {/* <h4 className='link-c-blue mb-0 text-center'> Goa Flora</h4> */}
-                                                    <p className='mb-0'>Biodiversity of Goa flora and fauna
-Much deciduous vegetation, including teak, sal, cashew and mango trees, is present. Fruits include jackfruits, mangos, pineapples and blackberries.</p>
+                                                    <p className='mb-0'>The St. Francis Xavier Church in Chicalim is a historic and revered site that celebrates the feast of St. Francis Xavier and Mary Immaculate every December. Additionally, visitors can explore the Palloti Retreat House, which hosts its patron's feast on January 22nd and the Harvest Festival on August 24th each year. These events offer a unique opportunity to experience the rich cultural and religious traditions of the region. Don't miss the chance to witness the beauty and significance of these ancient celebrations.</p>
                                                 </Card>
                                             </div>
                                             <div className='col-md-4 col-12'>
                                                 <Card
-                                                    title="Goa Fauna" className='faci-card link-ct-blue mb-0 text-center'
+                                                    title="Our Lady of Regina Mundi" className='faci-card link-ct-blue mb-0 text-center'
                                                     hoverable
                                                     style={{ width: imgWidth }}
-                                                    cover={<Image alt="example" src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671514627/vp/dongrim/facility/fauna_lrnoqm.jpg'} width={350} height={197} />}
+                                                    cover={<Image alt="example" src={c2a} />}
                                                 >
                                                     {/* <h4 className='link-c-blue mb-0 text-center'> Goa Fauna</h4> */}
-                                                    <p className='mb-0'>Foxes, wild boars and migratory birds are found in the jungles of Goa. The avifauna includes kingfishers, mynas and parrots </p>
+                                                    <p className='mb-0'>Monument of Our Lady of Regina Mundi is situated Near Regina Mundi High School. </p>
                                                 </Card>
                                             </div>
                                             <div className='col-md-4 col-12'>
                                                 <Card
-                                                    title="Mhadei  Wildlife Sanctuary" className='faci-card link-ct-blue mb-0 text-center'
+                                                    title="Shri. Sateri Devasthan" className='faci-card link-ct-blue mb-0 text-center'
                                                     hoverable
                                                     style={{ width: imgWidth }}
-                                                    cover={<Image alt="example" src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671514626/vp/dongrim/facility/wildlife_dyacsq.jpg'} width={350} height={197} />}
+                                                    cover={<Image alt="example" src={c4a} />}
                                                 >
                                                     {/* <h4 className='link-c-blue mb-0 text-center'> Mhadei  Wildlife Sanctuary</h4> */}
-                                                    <p className='mb-0'>The Mhadei Wildlife Sanctuary is a 208.48km protected area in the Indian state of Goa in the Western Ghats of South India. It is located in the North Goa District, Sattari taluka near the town of Valpoi.  </p>
+                                                    <p className='mb-0'>Temple located at Alto Chicalim are Shri. Sateri Devasthan at Chicalim, Goa.  </p>
                                                 </Card>
                                             </div>
                                             {/* <div className='col-md-4 pt-4 col-12'>
@@ -114,39 +123,36 @@ I appeal to all people to utilize services optimally. </p>
                                       </div>
                                   </TabPane>
 
-                                  <TabPane tab="Conservation Programme" key="4">
+                                  <TabPane tab="Schools, Hospital & Parks" key="4">
                                   <div className='row'>
                                             <div className='col-md-4 col-12 '>
                                                 <Card
-                                                    title="Card title" className='faci-card link-ct-blue mb-0 text-center'
+                                                    title="Regina Mundi High School" className='faci-card link-ct-blue mb-0 text-center'
                                                     hoverable
                                                     style={{ width: imgWidth }}
-                                                    cover={<Image alt="example" src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671514626/vp/dongrim/facility/tiger_conservation_lioaat.jpg'} width={350} height={197} />}
+                                                    cover={<Image alt="example" src={c6a} />}
                                                 >
-                                                    <h4 className='link-c-blue mb-0 text-center'> Tiger Conservation</h4>
-                                                    <p className='mb-0'>The Bengal tiger is a population of the Panthera tigris tigris subspecies. It ranks among the biggest wild cats alive today. It is considered to belong to the world's charismatic megafauna</p>
+                                                    <p className='mb-0'>Regina Mundi High School</p>
                                                 </Card>
                                             </div>
                                             <div className='col-md-4 col-12'>
                                                 <Card
-                                                    title="Card title" className='faci-card link-ct-blue mb-0 text-center'
+                                                    title="Joggers Park" className='faci-card link-ct-blue mb-0 text-center'
                                                     hoverable
                                                     style={{ width: imgWidth }}
-                                                    cover={<Image alt="example" src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671514625/vp/dongrim/facility/lakecleaning_kilqab.jpg'} width={350} height={197} />}
+                                                    cover={<Image alt="example" src={c7a} />}
                                                 >
-                                                    <h4 className='link-c-blue mb-0 text-center'>Desilting and cleaning of spring</h4>
-                                                    <p className='mb-0'>Activities such as cleaning, desilting and restoring of water bodies were carried out.</p>
+                                                    <p className='mb-0'>Joggers Park in Chicalim, Goa.</p>
                                                 </Card>
                                             </div>
                                             <div className='col-md-4 col-12'>
                                                 <Card
-                                                    title="Card title" className='faci-card link-ct-blue mb-0 text-center'
+                                                    title="Cottage Hospital" className='faci-card link-ct-blue mb-0 text-center'
                                                     hoverable
                                                     style={{ width: imgWidth }}
-                                                    cover={<Image alt="example" src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671514625/vp/dongrim/facility/govan_fjhcqx.jpg'} width={350} height={197} />}
+                                                    cover={<Image alt="example" src={c8a} />}
                                                 >
-                                                    <h4 className='link-c-blue mb-0 text-center'>Govan</h4>
-                                                    <p className='mb-0'>GoVan” is a brand developed by Goa State Biodiversity Board (GSBB) under its project with the aim of “Conservation of Biodiversity through livelihood interventions”</p>
+                                                    <p className='mb-0'>Cottage Hospital near Chicalim junction, Goa</p>
                                                 </Card>
                                             </div>
                                             {/* <div className='col-md-4 pt-4 col-12'>
@@ -196,17 +202,17 @@ I appeal to all people to utilize services optimally. </p>
                                             </div>
                                   </TabPane>
 
-                                  <TabPane tab="Education" key="5">
+                                  <TabPane tab="Community Services" key="5">
                                       <div className='row'>
                                             <div className='col-md-4 col-12'>
                                                 <Card
-                                                    title="Card title" className='faci-card link-ct-blue mb-0 text-center'
+                                                    title="Chicalim Biodiversity Management Committee" className='faci-card link-ct-blue mb-0 text-center'
                                                     hoverable
                                                     style={{ width: imgWidth }}
-                                                    cover={<Image alt="example" src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671779413/vp/dongrim/facility/faclity3_wvv71n.jpg'} width={350} height={197} />}
+                                                    cover={<Image alt="example" src={c5a} />}
                                                 >
-                                                    <h4 className='link-c-blue mb-0 text-center'>Govt primary school Golali</h4>
-                                                    <p className='mb-0'>It gives us immense pleasure providing facilities of School for the Childrens of Golali. I appeal to all people to utilize services optimally.</p>
+                                                    
+                                                    <p className='mb-0'>Chicalim Biodiversity Management Committee (BMC).</p>
                                                 </Card>
                                             </div>
                                             <div className='col-md-4 col-12'>
@@ -246,17 +252,16 @@ I appeal to all people to utilize services optimally. </p>
                                       </div>
                                   </TabPane>
 
-                                  <TabPane tab="Community Services" key="1">
+                                  <TabPane tab="Biodiversity" key="1">
                                   <div className='row'>
                                             <div className='col-md-4 col-12'>
                                                 <Card
-                                                    title="Card title" className='faci-card link-ct-blue mb-0 text-center'
+                                                    title="Farm Land" className='faci-card link-ct-blue mb-0 text-center'
                                                     hoverable
                                                     style={{ width: imgWidth }}
-                                                    cover={<Image alt="example" src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671191824/vp/dongrim/hivere_khurd_ny6xks.jpg'} width={350} height={197} />}
+                                                    cover={<Image alt="example" src={c10a} />}
                                                 >
-                                                    <h4 className='link-c-blue mb-0 text-center'>Temple at Hivere Khurd</h4>
-                                                    <p className='mb-0'>We want people of Nagoa to help hear God and develop an intimate Love Relationship with God. </p>
+                                                    <p className='mb-0'>Farm Land Near Chicalim Panchayat Ground, Goa. </p>
                                                 </Card>
                                             </div>
                                             {/* <div className='col-md-4 col-12'>
@@ -366,20 +371,39 @@ I appeal to all people to utilize services optimally.
                                             </div>
                                   </TabPane>
 
-                                  <TabPane tab="Waste Management" key="2">
-                                    <div className='row'>
-                                  <div className='col-md-4 pt-4 col-12'>
-                                                <Card
-                                                    title="Card title" className='faci-card link-ct-blue mb-0 text-center'
-                                                    hoverable
-                                                    style={{ width: imgWidth }}
-                                                    cover={<Image alt="example" src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671191817/vp/dongrim/9cf70a07-e862-44f5-b25f-ecdee4083f7e_tvqliz.png'} width={350} height={197} />}
-                                                >
-                                                    <h4 className='link-c-blue mb-0'>Waste Management</h4>
-                                                    <p className='mb-0'>Village Panchayat Dongurli-Thane has provided Waste Collection Vehicle to collect waste from different villages from the panchayat</p>
-                                                </Card>
-                                            </div>
-                                            {/* <div className='col-md-4 pt-4 col-12'>
+                                  <TabPane tab="Other Infrastrutures- Airport, Naval Museum" key="2">
+                                      <div className='row'>
+                                          <div className='col-md-4 pt-4 col-12'>
+                                              <Card
+                                                  title="Airport" className='faci-card link-ct-blue mb-0 text-center'
+                                                  hoverable
+                                                  style={{ width: imgWidth }}
+                                                  cover={<Image alt="example" src={c11a} />}
+                                              >
+                                                  <p className='mb-0'>Airport Near Chicalim, Goa.</p>
+                                              </Card>
+                                          </div>
+                                          <div className='col-md-4 pt-4 col-12'>
+                                              <Card
+                                                  title="Shivaji Maharaj Statue" className='faci-card link-ct-blue mb-0 text-center'
+                                                  hoverable
+                                                  style={{ width: imgWidth }}
+                                                  cover={<Image alt="example" src={c9a} />}
+                                              >
+                                                  <p className='mb-0'>Shivaji Maharaj Statue Near Chicalim, Goa.</p>
+                                              </Card>
+                                          </div>
+                                          <div className='col-md-4 pt-4 col-12'>
+                                              <Card
+                                                  title="Menlingtas Caves" className='faci-card link-ct-blue mb-0 text-center'
+                                                  hoverable
+                                                  style={{ width: imgWidth }}
+                                                  cover={<Image alt="example" src={c3a} />}
+                                              >
+                                                  <p className='mb-0'>There are two Menlingtas Caves/(Buyar) located near Post Office at Naquelim-Chicalim, Goa.</p>
+                                              </Card>
+                                          </div>
+                                          {/* <div className='col-md-4 pt-4 col-12'>
                                                 <Card
                                                     title="Card title" className='faci-card'
                                                     hoverable
@@ -390,7 +414,7 @@ I appeal to all people to utilize services optimally.
                                                     <p className='mb-0'>A biogas plant is facilited to people of Nagoa that treats farm wastes or house wastes Material. This will produce Bio-Gas using anaerobic digesters.</p>
                                                 </Card>
                                             </div> */}
-                                            </div>
+                                      </div>
                                   </TabPane>
                                   
                               </Tabs>
