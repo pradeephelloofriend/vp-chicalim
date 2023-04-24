@@ -11,28 +11,27 @@ import { useRouter } from 'next/router'
 
 
 import TabDetailsComponent from './TabDetailsComponent';
-import VillageComponent from './VillageComponent';
-import MessageComponent from './MessageComponent';
-import RegionComponent from './RegionComponent';
-import TaxesComponent from './TaxesComponent';
-import ObligationComponent from './ObligationComponent';
-import PowerComponent from './PowerComponent';
-import HousetaxtestComponent from '../housetaxtest/HousetaxtestComponent';
+import ApplicationsComponent from './ApplicationsComponent';
+import GrantsReceivedComponent from './GrantsReceivedComponent';
+import TendersComponent from './TendersComponent';
+import AdminAudit from './AdminAudit';
+// import VillageComponent from './VillageComponent';
+// import MessageComponent from './MessageComponent';
+// import RegionComponent from './RegionComponent';
+// import TaxesComponent from './TaxesComponent';
+// import ObligationComponent from './ObligationComponent';
+// import PowerComponent from './PowerComponent';
+// import HousetaxtestComponent from '../housetaxtest/HousetaxtestComponent';
 // import HousetaxtestComponent from './HousetaxtestComponent';
 
-const PmComponent = dynamic(
-  () => import("./PanchayatMemberComponent"),
-  {
-      ssr: false,
-  })
 const { TabPane } = Tabs;
-const AboutUsComponent = ({routeTitle,menuData,tabKey,setTabKey}) => {
+const ReportingComponent = ({routeTitle,menuData,tabKey,setTabKey}) => {
     const [mData,setMdata]=React.useState(null);
     const[tabLayout,setTablLayout]=React.useState(null)
     const router = useRouter();
-    console.log('menuData fg',menuData.filter(d=>d.node.label))
-    console.log('routeTitle abou',routeTitle)
-
+    console.log('mData new',menuData.filter(d=>d.node))
+    console.log('routeTitle report',routeTitle)
+    
     React.useEffect(()=>{
         //console.log('menuData',menuData)
         if(menuData.length>=1){
@@ -91,23 +90,16 @@ const AboutUsComponent = ({routeTitle,menuData,tabKey,setTabKey}) => {
                       <div className='page-content'>
                         <div className="caption1">
                           <h1>{t.node.label}</h1>
+                          
                         </div>
-                        {t.node.route.code == 'panchayat-members' ?
-                          <PmComponent />
-                          :t.node.route.code =='village'?
-                          <VillageComponent/>
-                          :t.node.route.code=='message'?
-                          <MessageComponent/>
-                          :t.node.route.code=='region'?
-                          <RegionComponent/>
-                          :t.node.route.code == 'taxes-fees'?
-                          <TaxesComponent/>
-                          :t.node.route.code == 'vp_oblig'?
-                          <ObligationComponent />
-                          :t.node.route.code == 'power_duties'?
-                          <PowerComponent />
-                          :t.node.route.code == 'house-tax-test'?
-                          <HousetaxtestComponent />
+                        {t.node.route.code == 'applications' ?
+                          <ApplicationsComponent/>
+                          :t.node.route.code =='grants-received'?
+                          <GrantsReceivedComponent/>
+                          :t.node.route.code=='tenders'?
+                          <TendersComponent/>
+                          :t.node.route.code=='admin-and-audit'?
+                          <AdminAudit/>
                           :
                           <TabDetailsComponent/>
                         }
@@ -134,4 +126,4 @@ const mapStateToProps=createStructuredSelector({
 const mapDispatchToProps=dispatch=>({
   setTabKey:data=>dispatch(setTabKey(data))
 })
-export default connect(mapStateToProps,mapDispatchToProps) (AboutUsComponent)
+export default connect(mapStateToProps,mapDispatchToProps) (ReportingComponent)

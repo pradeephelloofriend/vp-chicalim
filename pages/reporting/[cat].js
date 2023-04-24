@@ -6,21 +6,20 @@ import b from '../../public/img/breadcumb/b-page.jpg'
 import { useRouter } from 'next/router';
 
 import AboutUsComponent from '../../components/about-us/AboutUsComponent';
-const village = () => {
+import ReportingComponent from '../../components/reporting/ReportingComponent';
+const reporting = () => {
   const router=useRouter()
     
     const tempTitle=router.query.title;
-    console.log('router',router)
-    console.log('tempTitle about',tempTitle)
+    console.log('router report',router)
+    console.log('tempTitle report',tempTitle)
   return (
     <>
     
-      
-      <AboutUsComponent routeTitle={tempTitle}/>
+      <ReportingComponent routeTitle={tempTitle}/>
     
-      
     </>
   )
 }
 
-export default village
+export default reporting

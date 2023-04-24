@@ -22,12 +22,12 @@ const PopulationSectionComponent = () => {
                     <div className="col-md-10 col-lg-9 col-xl-7 mx-auto">
                         <div className="row align-items-center counter-wrapper">
                             <div className="col-md-6 text-center mb-1">
-                                <h3 className="counter counter-lg link-c-blue">9</h3>
+                                <h3 className="counter counter-lg link-c-blue">11</h3>
                                 <p>Wards</p>
                             </div>
                             
                             <div className="col-md-6 text-center mb-5">
-                                <h3 className="counter counter-lg link-c-blue">5488</h3>
+                                <h3 className="counter counter-lg link-c-blue">6,933</h3>
                                 <p>Total Population</p>
                             </div>
                             

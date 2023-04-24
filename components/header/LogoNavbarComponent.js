@@ -25,8 +25,8 @@ const LogoNavbarComponent = () => {
         <div className='cm-logo'>
         <Space>
             <div className='cm-text'>
-                <Title level={5}>Shri Pramod Sawant</Title>
-                <Text>Hon'ble Chief Minister</Text>
+                <Title level={5}>Shri. Mauvin Godinho</Title>
+                <Text>Cabinet Minister</Text>
             </div>
             {/* <Image src={'https://res.cloudinary.com/depg2aab2/image/upload/v1665068914/vp/nagoa/cm-logo_ne1c94.png'} height={100} width={80} alt="Village Panchayats"/> */}
             <Image src={mj} height={100} width={95} alt="Village Panchayats"/>

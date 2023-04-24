@@ -75,42 +75,42 @@ const OtherLinks = () => {
                         <div className="kam-topbar-left  align-items-center">
                             <ul className='sm-btm-right d-flex justify-content-between'>
                                             
-                                <li>
+                                <li onClick={() =>goToPage('reporting/admin-and-audit','admin-and-audit','Admin and Audit','Reporting','/admin-and-audit/','Yes')}>
                                     <span>
                                     <AuditOutlined />
                                     </span>
                                     <a>Admin & Audit</a>
                                     {/* <p>hello</p> */}
                                 </li>
-                                <li>
+                                <li onClick={() =>goToPage('reporting/grants-received','grants-received','Grants Received','Reporting','/grants-received/','Yes')}>
                                     <span>
                                         <LikeOutlined />
                                     </span>
                                     <a>Grants Received</a>
                                     {/* <p>hello</p> */}
                                 </li>
-                                <li>
+                                <li onClick={() =>goToPage('reporting/tenders','tenders','Tenders','Reporting','/tenders/','Yes')}>
                                     <span>
                                         <BookOutlined />
                                     </span>
                                     <a>Tenders</a>
                                     {/* <p>hello</p> */}
                                 </li>
-                                <li onClick={() =>goToPage('about-us/panchayat-members','panchayat-members','Panchayat Members','About Us','/panchayat-members/','Yes')}>
+                                <li onClick={() =>goToPage('reporting/applications','applications','Applications','Reporting','/applications/','Yes')}>
                                 <span>
                                     <FormOutlined />
                                     </span>
                                     <a>Applications</a>
                                     {/* <p>hello</p> */}
                                 </li>
-                                <li>
+                                <li onClick={() =>goToPage('about-us/panchayat-members','panchayat-members','Panchayat Members','About Us','/panchayat-members/','Yes')}>
                                 <span>
                                     <TeamOutlined />
                                     </span>
                                     <a>Members</a>
                                     {/* <p>hello</p> */}
                                 </li>
-                                <li>
+                                <li onClick={() =>goToPage('about-us/projects','projects','Projects Members','About Us','/projects/','Yes')}>
                                 <span>
                                     <ProjectOutlined />
                                     </span>

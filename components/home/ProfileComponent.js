@@ -43,8 +43,8 @@ const ProfileComponent = () => {
                     <li>Area :
                       <p>6901.68 hectares</p>
                     </li>
-                    <li>Population :
-                      <p>5488</p>
+                    <li>Population(2011) :
+                      <p>6,933</p>
                     </li>
                     <li>Households :
                       <p>1190</p>
@@ -73,9 +73,9 @@ const ProfileComponent = () => {
               </Card> */}
               
               
-              <li className='pf-bg-orange'>Assembly Constituency<p>Poriem</p></li> 
-              <li className='pf-bg-blue'>Parliament Constituency<p>North Goa</p></li>
-              <li className='pf-bg-merun'>Nearest Town <p>Satari</p></li>
+              <li className='pf-bg-orange'>Assembly Constituency<p>Mormugao</p></li> 
+              <li className='pf-bg-blue'>Parliament Constituency<p>South goa</p></li>
+              <li className='pf-bg-merun'>Nearest Town <p>NA</p></li>
             </ul>  
             </div>
             </Card.Body>

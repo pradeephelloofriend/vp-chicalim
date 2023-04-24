@@ -18,6 +18,12 @@ import c8a from '../../public/img/cards/Card8a.png'
 import c9a from '../../public/img/cards/Card9a.png'
 import c10a from '../../public/img/cards/Card10a.png'
 import c11a from '../../public/img/cards/Card11a.png'
+import c12a from '../../public/img/cards/Card12a.png'
+import c13a from '../../public/img/cards/Card13a.png'
+import c14a from '../../public/img/cards/Card14a.png'
+import c15a from '../../public/img/cards/Card15a.png'
+import c16a from '../../public/img/cards/Card16a.png'
+import c17a from '../../public/img/cards/Card17a.png'
 
 import Com from '../../public/img/about/nagoa.jpg'
 const FacilitesComponent = () => {
@@ -135,6 +141,26 @@ I appeal to all people to utilize services optimally. </p>
                                                     <p className='mb-0'>Regina Mundi High School</p>
                                                 </Card>
                                             </div>
+                                            <div className='col-md-4 col-12 '>
+                                                <Card
+                                                    title="Navy Children School" className='faci-card link-ct-blue mb-0 text-center'
+                                                    hoverable
+                                                    style={{ width: imgWidth }}
+                                                    cover={<Image alt="example" src={c16a} />}
+                                                >
+                                                    <p className='mb-0'>Navy Children School</p>
+                                                </Card>
+                                            </div>
+                                            <div className='col-md-4 col-12 '>
+                                                <Card
+                                                    title="BITS College" className='faci-card link-ct-blue mb-0 text-center'
+                                                    hoverable
+                                                    style={{ width: imgWidth }}
+                                                    cover={<Image alt="example" src={c12a} />}
+                                                >
+                                                    <p className='mb-0'>BITS College</p>
+                                                </Card>
+                                            </div>
                                             <div className='col-md-4 col-12'>
                                                 <Card
                                                     title="Joggers Park" className='faci-card link-ct-blue mb-0 text-center'
@@ -153,6 +179,26 @@ I appeal to all people to utilize services optimally. </p>
                                                     cover={<Image alt="example" src={c8a} />}
                                                 >
                                                     <p className='mb-0'>Cottage Hospital near Chicalim junction, Goa</p>
+                                                </Card>
+                                            </div>
+                                            <div className='col-md-4 col-12'>
+                                                <Card
+                                                    title="V.M Salgaokar Hospital" className='faci-card link-ct-blue mb-0 text-center'
+                                                    hoverable
+                                                    style={{ width: imgWidth }}
+                                                    cover={<Image alt="example" src={c13a} />}
+                                                >
+                                                    <p className='mb-0'>V.M Salgaokar Hospital near Chicalim junction, Goa</p>
+                                                </Card>
+                                            </div>
+                                            <div className='col-md-4 col-12'>
+                                                <Card
+                                                    title="Pai Hospital" className='faci-card link-ct-blue mb-0 text-center'
+                                                    hoverable
+                                                    style={{ width: imgWidth }}
+                                                    cover={<Image alt="example" src={c14a} />}
+                                                >
+                                                    <p className='mb-0'>Pai Hospital near Chicalim junction, Goa</p>
                                                 </Card>
                                             </div>
                                             {/* <div className='col-md-4 pt-4 col-12'>
@@ -217,24 +263,12 @@ I appeal to all people to utilize services optimally. </p>
                                             </div>
                                             <div className='col-md-4 col-12'>
                                                 <Card
-                                                    title="Card title" className='faci-card link-ct-blue mb-0 text-center'
+                                                    title="Government School" className='faci-card link-ct-blue mb-0 text-center'
                                                     hoverable
                                                     style={{ width: imgWidth }}
                                                     cover={<Image alt="example" src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671779415/vp/dongrim/facility/facility1_hgwotz.jpg'} width={350} height={197} />}
                                                 >
-                                                    <h4 className='link-c-blue mb-0 text-center'> Govt primary school Naneli</h4>
-                                                    <p className='mb-0'>It gives us immense pleasure providing facilities of School for the Childrens of Naneli. I appeal to all people to utilize services optimally. </p>
-                                                </Card>
-                                            </div>
-                                            <div className='col-md-4 col-12'>
-                                                <Card
-                                                    title="Card title" className='faci-card link-ct-blue mb-0 text-center'
-                                                    hoverable
-                                                    style={{ width: imgWidth }}
-                                                    cover={<Image alt="example" src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671779412/vp/dongrim/facility/facility4_qyieb2.jpg'} width={350} height={197} />}
-                                                >
-                                                    <h4 className='link-c-blue mb-0 text-center'> govt primary sachool charwane</h4>
-                                                    <p className='mb-0'>It gives us immense pleasure providing facilities of School for the Childrens of charwane. I appeal to all people to utilize services optimally. </p>
+                                                    <p className='mb-0'>It gives us immense pleasure providing facilities of School for the Childrens of Chicalim. I appeal to all people to utilize services optimally. </p>
                                                 </Card>
                                             </div>
                                             {/* <div className='col-md-4 pt-4 col-12'>
@@ -262,6 +296,16 @@ I appeal to all people to utilize services optimally. </p>
                                                     cover={<Image alt="example" src={c10a} />}
                                                 >
                                                     <p className='mb-0'>Farm Land Near Chicalim Panchayat Ground, Goa. </p>
+                                                </Card>
+                                            </div>
+                                            <div className='col-md-4 col-12'>
+                                                <Card
+                                                    title="Paddy Field" className='faci-card link-ct-blue mb-0 text-center'
+                                                    hoverable
+                                                    style={{ width: imgWidth }}
+                                                    cover={<Image alt="example" src={c17a} />}
+                                                >
+                                                    <p className='mb-0'>Paddy Field Near Chicalim Panchayat Ground, Goa. </p>
                                                 </Card>
                                             </div>
                                             {/* <div className='col-md-4 col-12'>
@@ -356,18 +400,6 @@ I appeal to all people to utilize services optimally.
 </p>
                                                 </Card>
                                             </div> */}
-                                            <div className='col-md-4 pt-4 col-12'>
-                                                <Card
-                                                    title="Card title" className='faci-card link-ct-blue mb-0 text-center'
-                                                    hoverable
-                                                    style={{ width: imgWidth }}
-                                                    cover={<Image alt="example" src={'https://res.cloudinary.com/depg2aab2/image/upload/v1671191824/vp/dongrim/well_znrdcg.jpg'} width={350} height={197} />}
-                                                >
-                                                    <h4 className='link-c-blue mb-0 text-center'>Well</h4>
-                                                    <p className='mb-0'>Well has been constructed to provide clean and Pure Drinking water to the people of Nagoa
-</p>
-                                                </Card>
-                                            </div>
                                             </div>
                                   </TabPane>
 

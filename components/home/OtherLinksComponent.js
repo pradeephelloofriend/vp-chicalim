@@ -7,31 +7,28 @@ const OtherLinksComponent = () => {
             <div className='row'>
                 <div className='col-3'>
                     <Card className='ol-card ol-hos'
-                    title={<b>Hospitals in Dongurli,Satari</b>}
+                    title={<b>Hospitals in Chicalim</b>}
                     >
                         <div className='ol-box'>
                             <ul className='text-wh'>
-                                <li>Rural Medical Dispensary Thane</li>
-                                <li>Joshi Dr Anuja Dattatray</li>
-                                <li>Rural Medical Dispensary ;Keri</li>
-                                <li>CHAITANYA HOSPITAL</li>
-                                <li>Manguirish Clinic</li>
-                                <li>Health Center Poriem</li>
+                                <li>V.M Salgaokar Hospital</li>
+                                <li>Pai Hospital</li>
+                                <li>Cottage Hospital</li>
                             </ul>
                         </div>
                     </Card>
                 </div>
                 <div className='col-3'>
                     <Card className='ol-card ol-tur'
-                    title={<b>Tourist Places Near By Dongurli</b>}
+                    title={<b>Tourist Places Near By Chicalim</b>}
                     >
                         <div className='ol-box'>
                             <ul className='text-wh'>
-                                <li>Nersa  </li>
-                                <li>Amboli    </li>
-                                <li>Sawantwadi   </li>
-                                <li>Vengurla   </li>
-                                <li>goa</li>
+                                <li>Bogmalo Beach  </li>
+                                <li>Three Kings Church    </li>
+                                <li>Hollant Beach  </li>
+                                <li>Sao Jacinto Island   </li>
+                                <li>Naval Aviation Museum</li>
                                 <br/>
                             </ul>
                         </div>
@@ -39,32 +36,26 @@ const OtherLinksComponent = () => {
                 </div>
                 <div className='col-3'>
                     <Card className='ol-card ol-park'
-                    title={<b>Local Parks in Dongurli,Satari</b>}
+                    title={<b>Local Parks in Chicalim</b>}
                     >
                         <div className='ol-box'>
                             <ul className='text-wh'>
-                                <li>Mangeli Waterfall Parking New</li>
-                                <li>Usap Waterfall</li>
-                                <li>HBC Children Park</li>
-                                <li>Flower Valley</li>
-                                <li>BICHOLIM WALKING PARK</li>
-                                <li>Tariwada Grounds</li>
+                                <li>Joggers Park</li>
+                                <li>Chicalim Sports Club</li>
+                                <li>Green Space Chicalim</li>
+                                <li>Childrens Park</li>
                             </ul>
                         </div>
                     </Card>
                 </div>
                 <div className='col-3'>
                     <Card className='ol-card ol-park'
-                    title={<b>Governement Offices near Dongurli,Satari</b>}
+                    title={<b>Government Offices near Chicalim</b>}
                     >
                         <div className='ol-box'>
                             <ul className='text-wh'>
-                                <li>Prarthana Hall</li>
-                                <li>VEAB OFFICE</li>
-                                <li>Water Resources Department</li>
-                                <li>Zonal Agriculture office; Bicholim</li>
-                                <li>BSNL Office</li>
-                                <li>Village Panchayat Office St Estevam</li>
+                                <li>Electricity Sub-section Office</li>
+                                <li>Chicalim Panchayat Ground</li>
                             </ul>
                         </div>
                     </Card>
