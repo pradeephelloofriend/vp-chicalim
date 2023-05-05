@@ -11,10 +11,10 @@ const { Title, Text } = Typography
 import QuoteForm from './schemes/QuoteForm'
 import i2 from '../../public/img/istockphoto-1201112520-612x612.jpg'
 import { getAllSchemeDataHome } from '../../lib/api';
-import { setLoading } from '../../redux/user/userAction';
 import { connect } from 'react-redux';
+import { setIsloading } from '../../redux/menu/menuAction';
 
-const Schemes=({setLoading})=> {
+const Schemes=({setIsloading})=> {
   const router =useRouter()
   
   const [sliderRef, setSliderRef] = React.useState(null)
@@ -27,6 +27,7 @@ const Schemes=({setLoading})=> {
             if (isApiSubscribed) {
               //console.log('cData',cData)
                setNdata(cData)
+               setIsloading(false)
                //setLoading(false)
             }
           }
@@ -143,5 +144,7 @@ const Schemes=({setLoading})=> {
   
 
 }
-
-export default Schemes
+const mapDispatchToProps=dispatch=>({
+  setIsloading:data=>dispatch(setIsloading(data))
+})
+export default connect(null,mapDispatchToProps) (Schemes)

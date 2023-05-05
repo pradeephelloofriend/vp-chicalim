@@ -1,14 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import BreadcumbComponent from '../../components/breadcumb/BreadcumbComponent'
-
-import b from '../../public/img/breadcumb/b-page.jpg'
 import { setUserUploadStatus,setRegCertData } from '../../redux/menu/menuAction';
 import { useRouter } from 'next/router';
 import Committee from '../../components/committees/CommitteeComponent';
 import TabDetailsComponent from '../../components/about-us/TabDetailsComponent';
 export async function getServerSideProps(context) {
-  console.log('context',context);
+  // console.log('context',context);
   const cDataQuery = await fetch(`${process.env.WP_API_PATH}committee?slug=${context.query.uri}`,{
     method: 'GET',
     headers: {
@@ -24,8 +21,8 @@ const village = ({setRegCertData,cmData}) => {
   const router=useRouter()
   // setRegCertData(null)  
     const tempTitle=router.query.title;
-    console.log('router-cmdata',cmData)
-    console.log('router-cmdata',router)
+    // console.log('router-cmdata',cmData)
+    // console.log('router-cmdata',router)
   return (
     <>
 

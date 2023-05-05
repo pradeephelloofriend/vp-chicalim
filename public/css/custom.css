@@ -1083,6 +1083,12 @@ padding-left: 0rem;
 .link-disp-blue{
   color: #28375f;
 }
+.link-disp-black{
+  color: #000000;
+}
+.link-disp-black p{
+  color: #000000;
+}
 .link-c-white{
   color: #ffffff;
 }
@@ -1632,17 +1638,37 @@ padding-left: 0rem;
     list-style: none;
     padding-left: 0;
 }
+.ph-ul {
+  display: inline-flex;
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+.ph-ul li{
+/* margin-right: 70px; */
+    margin-right: 25px;
+    margin-left: 25px;
+}
+.ph-ul li p{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
 .pf-ul li{
-margin-right: 70px;
+/* margin-right: 70px; */
+    margin-right: 25px;
+    margin-left: 25px;
 }
 .pf-ul li p{
-  font-size: 25px;
-  font-weight: 300;
+  font-size: 30px;
+  font-weight: 500;
   margin-bottom: 0;
   line-height: 1.2;
 }
 .pf-other li{
   padding: 10px;
+  border-radius: 10px;
 }
 .pf-other li p{
   border-top: 1px solid #c4c4c470;
@@ -1655,6 +1681,9 @@ margin-right: 70px;
 }
 .pf-bg-merun{
   background-color: #ad008f;;
+}
+.pf-bg-skyb{
+  background-color: #20a0d5;;
 }
 .r-nav-item .nav-btn{
   /*background-color: #0063ff;
@@ -5180,7 +5209,7 @@ margin-right: 70px;
   margin-top: 60px;
 }
 .marquee a{
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 100;
 }
 @media only screen and (max-width: 991px) {
@@ -5203,7 +5232,7 @@ margin-right: 70px;
 }
 .abt-card{
   /* border: 1px solid #7f7544 !important; */
-  border: 1px solid #28375f !important;
+  border: 2px solid #28375f !important;
   border-radius: 0px;
   border-top-left-radius: 0px !important ;
   border-top-right-radius: 0px !important ;
@@ -5813,6 +5842,7 @@ background-size:cover;
     font-size: 18px;
 }
 .rd-badge .badge{
+  border: 1px solid #28375f;
   font-size: 18px;
   font-weight: 500;
 }
@@ -5853,6 +5883,9 @@ background-size:cover;
   padding: 8px;
   
 
+}
+.vil-info {
+  box-shadow: 7px 8px 7px #5e5d5c;
 }
 .vil-info .ant-card-body{
   padding: 8px;

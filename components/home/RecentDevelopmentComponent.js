@@ -10,21 +10,47 @@ import "slick-carousel/slick/slick-theme.css";
 import Figure from 'react-bootstrap/Figure'
 const { Title ,Text} = Typography;
 const { Meta } = Card;
-class RecentDevelopmentComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
+
+import {useRouter} from 'next/router'
+import { getRecentDevData } from '../../lib/api';
+import load from '../../public/img/loading.png'
+
+const RecentDevelopmentComponent = () => {
+  const router =useRouter()
+  
+  const [sliderRef, setSliderRef] = React.useState(null)
+  const [rdData,setRddata]=React.useState(null)
+
+  
+
+  const next=()=> {
+    sliderRef?.slickNext()
   }
-  next() {
-    this.slider.slickNext();
+  const previous=()=> {
+    sliderRef?.slickPrev()
   }
-  previous() {
-    this.slider.slickPrev();
-  }
-  render(){
-    const {devData}=this.props
-    // console.log('devData new',devData)
+
+  React.useEffect(()=>{
+    let isApiSubscribed = true;
+    async function fetchData() {
+        const rData = await getRecentDevData() //applo client   
+        // 👇️ only update state if component is mounted
+        if (isApiSubscribed) {
+          //console.log('cData',cData)
+          setRddata(rData)
+           //setLoading(false)
+        }
+      }
+     
+      fetchData()
+      return () => {
+        // cancel the subscription
+        isApiSubscribed = false;
+      };
+    },[])
+  
+    
+    //console.log('schemesData',schemesData)
     const settings = {
       dots: false,
       infinite: true,
@@ -32,14 +58,15 @@ class RecentDevelopmentComponent extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       adaptiveHeight: true,
+      
       autoplay: true,
       arrows: false,
       responsive: [
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             infinite: true,
 
           }
@@ -47,7 +74,7 @@ class RecentDevelopmentComponent extends React.Component {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 2,
             initialSlide: 2
           }
@@ -66,62 +93,32 @@ class RecentDevelopmentComponent extends React.Component {
 
         
           <div className="rd-btn-arrow offset-md-1 offset-lg-3">
-            <Button type="text" className="btn-prev " onClick={this.previous} ><LeftOutlined /></Button>
-            <Button type="text" className="btn-next ms-xxl-2" onClick={this.next}><RightOutlined /></Button>
+            <Button type="text" className="btn-prev " onClick={previous} ><LeftOutlined /></Button>
+            <Button type="text" className="btn-next ms-xxl-2" onClick={next}><RightOutlined /></Button>
           </div>
         
-        <Slider ref={c => (this.slider = c)} {...settings}>
-          {devData!==null?
-          devData.map((d,idx)=>
-          <div key={idx} className="slick-item">
+        <Slider ref={setSliderRef } {...settings}>
+          {rdData!==null?
+          rdData.map((d,idx)=>
+          <div key={idx} className="slick-item">  
             <Card
               className='dev-card1'
               hoverable
 
-              cover={<Image src={d.acf.image.url} alt='' height={427} width={518} />}
+              cover={<Image src={d.developments.image.sourceUrl} placeholder="blur" blurDataURL={load} priority={true} alt='' height={450} width={700} />}
             >
               <div className='dev-slider-box rd-badge'>
-                <span className="badge bg-white link-disp-blue rounded-pill">{d.acf.title}</span>
+                <span className="badge bg-white link-disp-blue rounded-pill">{d.developments.title}</span>
               </div>
             </Card>
           </div>
-          )
-          :
-          <></>}
+          ):<></>}
           
           
         </Slider>
-        {/*<div className='row g-2'>
-          <div className='col-md-6 col-12'>
-            <Card
-              className='dev-card1'
-              hoverable
-  
-              cover={<Image src={'https://res.cloudinary.com/depg2aab2/image/upload/v1665068680/vp/nagoa/s4-min_gpbbng.jpg'} alt='' height={361} width={518} />}
-            >
-              <div className='dev-slider-box'>
-                <span className="badge bg-white link-c-blue rounded-pill">Village under monitor Camera</span>
-              </div>
-            </Card>
-          </div>
-  
-          <div className='col-md-6 col-12'>
-            <Card
-              className='dev-card1'
-              hoverable
-  
-              cover={<Image src={'https://res.cloudinary.com/depg2aab2/image/upload/v1665068680/vp/nagoa/s2-min_ssit0c.jpg'} alt='' height={361} width={518} />}
-            >
-              <div className='dev-slider-box'>
-                <span className="badge bg-white link-c-blue rounded-pill">Tubwell Work</span>
-              </div>
-            </Card>
-          </div>
-        </div>*/}
       </>
     )
   }
   
-}
 
 export default RecentDevelopmentComponent

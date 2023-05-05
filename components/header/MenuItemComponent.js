@@ -9,7 +9,7 @@ import { createStructuredSelector } from 'reselect'
 import { useRouter } from 'next/router'
 
 const MenuItemComponent = ({ menuData ,setTabKey}) => {
-    console.log('menuData2', menuData)
+    // console.log('menuData2', menuData)
 
     const router = useRouter()
      //console.log('router', router)

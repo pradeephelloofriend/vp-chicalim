@@ -23,7 +23,7 @@ const ApplicationsComponent = () => {
             isApiSubscribed = false;
           };
     },[])
-    console.log('crData',crData)
+    // console.log('crData',crData)
   return (
       <>
       

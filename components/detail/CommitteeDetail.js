@@ -73,7 +73,7 @@ const CommitteeDetail = ({regCertData,cDetailData}) =>{
       setShow(false)
       //setRegStatus(false)
     };   
-  //console.log('cDetailData',cDetailData)
+  console.log('cDetailData',cDetailData)
     // console.log('applicationTab.members',applicationTab.members)
 
 
@@ -95,9 +95,8 @@ const CommitteeDetail = ({regCertData,cDetailData}) =>{
                           <tr>
                             <td className='fw-bolder fs-20 fs-clr' style={{textAlign:'center'}}>Name</td>
                             <td className='text-center fw-bolder fs-20 fs-clr' style={{textAlign:'center'}}>Designation</td>
-                            <td className='text-center fw-bolder fs-20 fs-clr' style={{textAlign:'center'}}>Contact No.
-
-                            </td>
+                            <td className='text-center fw-bolder fs-20 fs-clr' style={{textAlign:'center'}}>Contact No.</td>
+                            <td className='text-center fw-bolder fs-20 fs-clr' style={{textAlign:'center'}}>Email ID</td>
                           </tr>
 
                         </thead>
@@ -108,7 +107,7 @@ const CommitteeDetail = ({regCertData,cDetailData}) =>{
                                 <td className='fs-15' style={{textAlign:'center'}}>{m.name}</td>
                                 <td className='px-10 fs-15' style={{textAlign:'center'}}>{m.designation}</td>
                                 <td className='text-centre fs-15' style={{textAlign:'center'}}>{m.contactNo}</td>
-
+                                <td className='text-centre fs-15' style={{textAlign:'center'}}>{m.emailId}</td>
                               </tr>
                             </tbody>
                          

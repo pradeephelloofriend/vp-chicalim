@@ -18,7 +18,7 @@ const OtherLinks = () => {
             const cData = await getNoticeHomeData() //applo client   
             // 👇️ only update state if component is mounted
             if (isApiSubscribed) {
-              console.log('cData',cData)
+            //   console.log('cData',cData)
                setNdata(cData)
             }
           }
@@ -51,7 +51,7 @@ const OtherLinks = () => {
                         <div className='marquee-box'>
                             <div className="row text-center">
                                 <div className="col-md-2">
-                                    <h6 class="allheadcolor">What's New</h6>
+                                    <h6 className="allheadcolor">What's New</h6>
                                 </div>
                                 
                                 <div className="col-md-10">

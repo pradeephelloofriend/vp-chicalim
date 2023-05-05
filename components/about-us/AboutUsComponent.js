@@ -30,8 +30,8 @@ const AboutUsComponent = ({routeTitle,menuData,tabKey,setTabKey}) => {
     const [mData,setMdata]=React.useState(null);
     const[tabLayout,setTablLayout]=React.useState(null)
     const router = useRouter();
-    console.log('menuData fg',menuData.filter(d=>d.node.label))
-    console.log('routeTitle abou',routeTitle)
+    // console.log('menuData fg',menuData.filter(d=>d.node.label))
+    // console.log('routeTitle abou',routeTitle)
 
     React.useEffect(()=>{
         //console.log('menuData',menuData)

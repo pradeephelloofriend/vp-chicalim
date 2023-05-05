@@ -21,6 +21,10 @@ export const setUserProfileData = data => ({
     type: userActionTypes.SET_USER_PROFILE_DATA,
     payload: data
 })
+export const setUserId = data => ({
+    type: userActionTypes.SET_USER_ID,
+    payload: data
+})
 /*export const fetchUserProfileData = (uId) => {
     return dispatch => {
         //console.log('tripId', tripId)

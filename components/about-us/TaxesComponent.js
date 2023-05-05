@@ -21,7 +21,7 @@ const MessageComponent = () => {
             isApiSubscribed = false;
           };
     },[])
-    console.log(crData);
+    // console.log(crData);
   return (
       <>
         {crData !== null? 
@@ -31,20 +31,20 @@ const MessageComponent = () => {
         <table>
             <thead>
                 <tr>
-                    <td className='fw-bolder fs-20'>Sr. No</td>
-                    <td className='ps-10 fw-bolder fs-20'>For
+                    <td className='text-center fw-bolder fs-20 fs-clr'>Sr. No</td>
+                    <td className='text-center fw-bolder fs-20 fs-clr'>For
                     </td>
-                    <td className=' fw-bolder fs-20'>rate</td>
+                    <td className='text-center fw-bolder fs-20 fs-clr'>rate</td>
                 </tr>
             </thead>
 
         { crData.fees.feesInformation.map((m) =>
         <tbody>
             <tr>
-                <td className='fs-15'>{m.entry}
+                <td className='fs-15' style={{textAlign:'center'}}>{m.entry}
                 </td>
-                <td className='px-10 fs-15'>{m.for}</td>
-                <td className='text-centre fs-15'>{m.rate}</td>
+                <td className='px-10 fs-15' style={{textAlign:'center'}}>{m.for}</td>
+                <td className='text-centre fs-15' style={{textAlign:'center'}}>{m.rate}</td>
             </tr>
         </tbody>
 
@@ -56,23 +56,22 @@ const MessageComponent = () => {
         <table>
             <thead>
                 <tr>
-                    <td className='fw-bolder fs-20'>Sr. No</td>
-                    <td className='ps-10 fw-bolder fs-20'>Taxes
+                    <td className='text-center fw-bolder fs-20 fs-clr'>Sr. No</td>
+                    <td className='text-center fw-bolder fs-20 fs-clr'>Taxes
                     </td>
-                    <td className=' fw-bolder fs-20'>For
+                    <td className='text-center fw-bolder fs-20 fs-clr'>For
                     </td>
-                    <td className='  ps-9 fw-bolder fs-20'>rate</td>
+                    <td className='text-center fw-bolder fs-20 fs-clr'>rate</td>
                 </tr>
             </thead>
 
         { crData.taxes.taxInformation.map((m) =>
         <tbody>
             <tr>
-                <td className='fs-15'>{m.entry}
-                </td>
-                <td className='px-10 fs-15'>{m.taxes}</td>
-                <td className='fs-15'>{m.for}</td>
-                <td className=' ps-9 text-centre fs-15'>{m.rate}</td>
+                <td className='fs-15' style={{textAlign:'center'}}>{m.entry}</td>
+                <td className='px-10 fs-15' style={{textAlign:'center'}}>{m.taxes}</td>
+                <td className='fs-15' style={{textAlign:'center'}}>{m.for}</td>
+                <td className=' ps-9 text-centre fs-15' style={{textAlign:'center'}}>{m.rate}</td>
             </tr>
         </tbody>
 

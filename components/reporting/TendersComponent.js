@@ -23,7 +23,7 @@ const TendersComponent = () => {
             isApiSubscribed = false;
           };
     },[])
-    console.log('crData',crData)
+    // console.log('crData',crData)
   return (
       <>
       

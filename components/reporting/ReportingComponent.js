@@ -15,22 +15,14 @@ import ApplicationsComponent from './ApplicationsComponent';
 import GrantsReceivedComponent from './GrantsReceivedComponent';
 import TendersComponent from './TendersComponent';
 import AdminAudit from './AdminAudit';
-// import VillageComponent from './VillageComponent';
-// import MessageComponent from './MessageComponent';
-// import RegionComponent from './RegionComponent';
-// import TaxesComponent from './TaxesComponent';
-// import ObligationComponent from './ObligationComponent';
-// import PowerComponent from './PowerComponent';
-// import HousetaxtestComponent from '../housetaxtest/HousetaxtestComponent';
-// import HousetaxtestComponent from './HousetaxtestComponent';
 
 const { TabPane } = Tabs;
 const ReportingComponent = ({routeTitle,menuData,tabKey,setTabKey}) => {
     const [mData,setMdata]=React.useState(null);
     const[tabLayout,setTablLayout]=React.useState(null)
     const router = useRouter();
-    console.log('mData new',menuData.filter(d=>d.node))
-    console.log('routeTitle report',routeTitle)
+    // console.log('mData new',menuData.filter(d=>d.node))
+    // console.log('routeTitle report',routeTitle)
     
     React.useEffect(()=>{
         //console.log('menuData',menuData)
@@ -74,7 +66,7 @@ const ReportingComponent = ({routeTitle,menuData,tabKey,setTabKey}) => {
           window.addEventListener('resize', handleResize)
 
     },[menuData,routeTitle])
-    console.log('mData',mData)
+    // console.log('mData',mData)
 
    const {title}= router.query
   return (

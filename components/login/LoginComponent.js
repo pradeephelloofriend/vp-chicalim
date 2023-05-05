@@ -19,7 +19,7 @@ const LoginComponent = ({setRegStatus,setUserPhone}) => {
     const [capthaVerifier,setCapthaVerifier]=React.useState(false)
     var recaptchaWrapperRef=null
     const onFinish = (values) => {
-        console.log('Success:', values);
+        // console.log('Success:', values);
         if(erPwd && error ){
             alert('enter all input')
         }else{

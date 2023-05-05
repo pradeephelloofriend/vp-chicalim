@@ -13,15 +13,15 @@ const ContactUsComponent = ({cData}) => {
                               </div>
                       <div className='col-md-6'>
                             <div className='desc-block'>
-                                <strong><i class="fa fa-home" aria-hidden="true"></i>Address:</strong>
+                                <strong><i className="fa fa-home" aria-hidden="true"></i>Address:</strong>
                                 <div dangerouslySetInnerHTML={{ __html:acf.address!==null?acf.address:<></>}} />
-                            <p><strong><i class="fa fa-phone-square" aria-hidden="true"></i>Phone: </strong>
+                            <p><strong><i className="fa fa-phone-square" aria-hidden="true"></i>Phone: </strong>
                             {acf.phone.map((p,idx)=>
                             p.number
                             )}
                             </p>
 
-                            <p><strong><i class="fa fa-envelope" aria-hidden="true"></i>Email: </strong>
+                            <p><strong><i className="fa fa-envelope" aria-hidden="true"></i>Email: </strong>
                             {acf.email.map((p,idx)=>
                             p.email_id
                             )}

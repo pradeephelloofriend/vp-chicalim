@@ -81,7 +81,7 @@ const  Committee = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKey})
     
     
    const {title,desc}= router.query
-   console.log('crData',crData)
+  //  console.log('crData',crData)
    function onTabClickBtn(key,event){
     //console.log('event',event)
     setTabKey(key)

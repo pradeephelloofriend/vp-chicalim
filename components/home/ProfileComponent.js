@@ -1,15 +1,18 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
+import Image from 'next/image'
+import pmap from '../../public/img/mormugaoMap2.png'
 
 const ProfileComponent = () => {
   return (
     <>
-    <section class="wrapper image-wrapper bg-image bg-overlay profile-section" >
-      <div class="container py-12">
-        <div class="row">
-          <div class="col-lg-5">
+    <section className="wrapper image-wrapper bg-image bg-overlay profile-section" >
+      <div className="container py-12">
+        <div className="row">
+          <div className="col-lg-5">
             <div className='pf-img-block'>
-                <img src='https://res.cloudinary.com/depg2aab2/image/upload/v1670342628/vp/dongrim/dongurli-map-min_jhxgx1.png' alt=''/>
+                <Image className='image' alt="example" src={pmap} height={800} width={800}/>
+                {/* <img src='https://res.cloudinary.com/depg2aab2/image/upload/v1670342628/vp/dongrim/dongurli-map-min_jhxgx1.png' alt=''/> */}
             </div>
             
           </div>
@@ -17,20 +20,20 @@ const ProfileComponent = () => {
           <Card >
             <Card.Body>
             <div className='pf-content-block '>
-            <h4 class="display-6 mb-0 text-white">Chicalim Profile</h4>
+            <h4 className="display-6 mb-0 text-white">Chicalim Profile</h4>
               <Card className='display-c1'>
                 <Card.Body>
-                  <ul className='pf-ul text-white mt-3'>
-                    <li>Block / Taluka :
+                  <ul className='ph-ul text-white mt-3'>
+                    <li>Block / Taluka 
                       <p>Mormugao</p>
                     </li>
-                    <li>District :
+                    <li>District 
                       <p>South Goa</p>
                     </li>
-                    <li>State :
+                    <li>State 
                       <p>Goa</p>
                     </li>
-                    <li>Pincode :
+                    <li>Pincode 
                       <p>403711</p>
                     </li>
                   </ul>
@@ -39,14 +42,14 @@ const ProfileComponent = () => {
 
               <Card className='display-c1'>
                 <Card.Body>
-                  <ul className='pf-ul text-white mt-3'>
-                    <li>Area :
+                  <ul className='ph-ul text-white mt-3'>
+                    <li>Area 
                       <p>6901.68 hectares</p>
                     </li>
-                    <li>Population(2011) :
+                    <li>Population(2011) 
                       <p>6,933</p>
                     </li>
-                    <li>Households :
+                    <li>Households 
                       <p>1190</p>
                     </li>
 
@@ -71,11 +74,28 @@ const ProfileComponent = () => {
                 <li className='pf-bg-merun'>Nearest Town <p>Satari</p></li> 
                 </Card.Body>
               </Card> */}
+
+              <Card className='display-c1'>
+                <Card.Body>
+                  <ul className='pf-ul text-white mt-3'>
+                    <li className='pf-bg-orange'>Assembly Constituency
+                      <p>Mormugao</p>
+                    </li>
+                    <li className='pf-bg-blue'>Parliament Constituency
+                      <p>South Goa</p>
+                    </li>
+                    <li className='pf-bg-skyb'>Nearest Town 
+                      <p>Mormugao</p>
+                    </li>
+
+                  </ul>
+                </Card.Body>
+              </Card>
               
               
-              <li className='pf-bg-orange'>Assembly Constituency<p>Mormugao</p></li> 
+              {/* <li className='pf-bg-orange'>Assembly Constituency<p>Mormugao</p></li> 
               <li className='pf-bg-blue'>Parliament Constituency<p>South goa</p></li>
-              <li className='pf-bg-merun'>Nearest Town <p>NA</p></li>
+              <li className='pf-bg-merun'>Nearest Town <p>Mormugao</p></li> */}
             </ul>  
             </div>
             </Card.Body>

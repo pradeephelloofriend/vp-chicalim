@@ -52,3 +52,9 @@ export const setTabKey = data => ({
 
             }
         }
+
+        export const setIsloading = data => ({
+            type: menuActionTypes.SET_IS_LOADING,
+            payload: data
+        
+        })

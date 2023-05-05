@@ -8,11 +8,11 @@ const UploadRegistrtionComponent = ({setUserUploadStatus,appId,setRegCertData}) 
     const onFinish = (values) => {
         setUserUploadStatus(true)
         setRegCertData({appId:appId,appType:'IC',regStatus:'Y'})
-        console.log('Success:', values);
+        // console.log('Success:', values);
       };
     
       const onFinishFailed = (errorInfo) => {
-        console.log('Failed:', errorInfo);
+        // console.log('Failed:', errorInfo);
       };
   return (
       <>

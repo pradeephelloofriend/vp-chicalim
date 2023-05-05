@@ -21,3 +21,7 @@ export const selectTabKey= createSelector(
     [selectmenu],
     data => data.tabKey
 );
+export const selectIsloading= createSelector(
+    [selectmenu],
+    data => data.isLoading
+);

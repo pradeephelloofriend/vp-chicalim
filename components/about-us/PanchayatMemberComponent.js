@@ -1,24 +1,47 @@
 import React from 'react'
-import { Card,Typography,Tabs,Button } from 'antd';
+import { Card,Typography,Tabs,Button, Spin } from 'antd';
 import { Tree, TreeNode } from 'react-organizational-chart';
 import Image from 'next/image'
 import t1 from '../../public/img/team/Dario.jpg'
 const {Title,Text}=Typography
+import { getPanchMemData } from '../../lib/api';
+
 const PanchayatMemberComponent = () => {
+    const [pmData,setPmdata]=React.useState(null)
+    const[isLoading,setIsloading]=React.useState(false)
+    React.useEffect(() => {
+        let isApiSubscribed = true;
+        setIsloading(true)
+        async function fetchData() {
+            
+            const pData = await getPanchMemData() //applo client
+            // 👇️ only update state if component is mounted
+            if (isApiSubscribed) {
+                setPmdata(pData)
+                setIsloading(false)
+            }
+          }
+          fetchData()
+          return () => {
+            // cancel the subscription
+            isApiSubscribed = false;
+          };
+      },[])
+      //console.log('pmData Panch Members',pmData)
   return (
       <>
           <div className='pm-block h-scroll'>
+            <Spin spinning={isLoading}>
             <Tree label={<div>
-                <Button className='team-level'>Directorate Of Panchayats</Button>
+                <Button className='team-level'>{ pmData ? pmData.directorateOfPanchayats.fieldGroupName :<></>}</Button>
                     <div className='team-content-block'>
                         <div className="team-block">
                             <div className="team-image">
                                 <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
                             </div>
                             <div className="team-content">
-                                <p className="darkGrey">Siddhi Halarnkar</p>
-                                <p className="grey">
-                                    Director  </p>
+                                <p className="darkGrey">{ pmData ? pmData.directorateOfPanchayats.name :<></>}</p>
+                                <p className="grey"> { pmData ? pmData.directorateOfPanchayats.designation :<></>}  </p>
                             </div>
                         </div>
                     </div>
@@ -26,281 +49,74 @@ const PanchayatMemberComponent = () => {
                 
             }>
                 <TreeNode label={<div>
-                    <Button className='team-level'>Block Development Officer</Button>
+                    <Button className='team-level'>{ pmData ? pmData.directorateOfPanchayats.blockDevelopmentOfficer.fieldGroupName :<></>}</Button>
                     <div className='team-content-block'>
                         <div className="team-block">
                             <div className="team-image">
                                 <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
                             </div>
                             <div className="team-content">
-                                <p className="darkGrey">Suryajirao V. Rane</p>
-                                <p className="grey">
-                                    BDO  </p>
+                                {/* <p className="darkGrey">Suryajirao V. Rane</p> */}
+                                <p className="darkGrey">{ pmData ? pmData.directorateOfPanchayats.blockDevelopmentOfficer.name :<></>}</p>
+                                {/* <p className="grey">BDO  </p> */}
+                                <p className="grey">{ pmData ? pmData.directorateOfPanchayats.blockDevelopmentOfficer.designation :<></>}  </p>
                             </div>
                         </div>
                     </div>
                     </div>
                 }>
-                    <TreeNode label={
-                    <div>
-                        <Button className='team-level'>Sarpanch</Button>
-                        <div className='team-content-block'>
-                        <div className="team-block">
-                            <div className="team-image">
-                                <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
-                            </div>
-                            <div className="team-content">
-                                <p className="darkGrey">KAMALAPRASAD JAGANNATH YADAV</p>
-                                <p className="grey">
-                                Sarpanch  </p>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                }>
-                        <TreeNode label={
-                        <div>
-                            <Button className='team-level'>Ward 1</Button>
-                            <div className='team-content-block'>
-                                <div className="team-block">
-                                    <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
-                                    </div>
-                                    <div className="team-content">
-                                        <p className="darkGrey">MARIA JOAO MASCARENHAS</p>
-                                        <p className="grey">
-                                        Member </p>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        }>
-                            
-                        </TreeNode>
-                        <TreeNode label={
-                        <div>
-                            <Button className='team-level'>Ward 2</Button>
-                            <div className='team-content-block'>
-                                <div className="team-block">
-                                    <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
-                                    </div>
-                                    <div className="team-content">
-                                        <p className="darkGrey">NEELAM AVDUTH NAIK</p>
-                                        <p className="grey">
-                                        Member  </p>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        }>
-                            
-                        </TreeNode>
-
-                        <TreeNode label={
-                        <div>
-                            <Button className='team-level'>Ward 3</Button>
-                            <div className='team-content-block'>
-                                <div className="team-block">
-                                    <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
-                                    </div>
-                                    <div className="team-content">
-                                        <p className="darkGrey">SUNITADEVI KAMALAPRASAD YADAV</p>
-                                        <p className="grey">
-                                        Member  </p>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        }>
-                        </TreeNode>
-
-                    
-                        <TreeNode label={
-                        <div>
-                            <Button className='team-level'>Ward 4</Button>
-                            <div className='team-content-block'>
-                                <div className="team-block">
-                                    <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
-                                    </div>
-                                    <div className="team-content">
-                                        <p className="darkGrey">DATTAPRASAD LAXMAN BANDODKAR</p>
-                                        <p className="grey">
-                                        Member  </p>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        }>
-                            
-                        </TreeNode>
+                
+                {pmData!==null ? pmData.directorateOfPanchayats.blockDevelopmentOfficer.members.map((d,ix)=>
+                <TreeNode label={
+                    <div>  
                         
-                        <TreeNode label={
-                        <div>
-                            <Button className='team-level'>Ward 5</Button>
-                            <div className='team-content-block'>
-                                <div className="team-block">
-                                    <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
-                                    </div>
-                                    <div className="team-content">
-                                        <p className="darkGrey">KAMALAPRASAD JAGANNATH YADAV</p>
-                                        <p className="grey">
-                                        Sarpanch  </p>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        }>
-                            
-                        </TreeNode>
-                        <TreeNode label={
-                        <div>
-                            <Button className='team-level'>Ward 6</Button>
-                            <div className='team-content-block'>
-                                <div className="team-block">
-                                    <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
-                                    </div>
-                                    <div className="team-content">
-                                        <p className="darkGrey">SAPNA SHIVAJI KURADE</p>
-                                        <p className="grey">
-                                            Member  </p>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        }>
-                            
-                        </TreeNode>
-
-                        <TreeNode label={
-                        <div>
-                            <Button className='team-level'>Ward 7</Button>
-                            <div className='team-content-block'>
-                                <div className="team-block">
-                                    <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
-                                    </div>
-                                    <div className="team-content">
-                                        <p className="darkGrey">Shailesh Mayekar</p>
-                                        <p className="grey">
-                                            Member  </p>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        }>
-                            
-                        </TreeNode> 
-
-                        <TreeNode label={
-                        <div>
-                            <Button className='team-level'>Ward 8</Button>
-                            <div className='team-content-block'>
-                                <div className="team-block">
-                                    <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
-                                    </div>
-                                    <div className="team-content">
-                                        <p className="darkGrey">FRANCISCO JOSE DIOGO FRANCISCO NUNES </p>
-                                        <p className="grey">
-                                            Member  </p>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        }>
-                            
-                        </TreeNode>
-
-                        <TreeNode label={
-                        <div>
-                            <Button className='team-level'>Ward 9</Button>
-                            <div className='team-content-block'>
-                                <div className="team-block">
-                                    <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
-                                    </div>
-                                    <div className="team-content">
-                                        <p className="darkGrey">POONAM DATTA CHARI</p>
-                                        <p className="grey">
-                                            Member  </p>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        }>
-                            
-                        </TreeNode>
-
-                        <TreeNode label={
-                            <div>
-                                <Button className='team-level'>Ward 10</Button>
-                                <div className='team-content-block'>
-                                    <div className="team-block">
-                                        <div className="team-image">
-                                            <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt="" />
-                                        </div>
-                                        <div className="team-content">
-                                            <p className="darkGrey">AISHWARYA ARVIND KORGAONKAR</p>
-                                            <p className="grey">Dy-Sarpanch  </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        }>
-                        </TreeNode>
-
-                        <TreeNode label={
-                            <div>
-                                <Button className='team-level'>Ward 11</Button>
-                                <div className='team-content-block'>
-                                    <div className="team-block">
-                                        <div className="team-image">
-                                            <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt="" />
-                                        </div>
-                                        <div className="team-content">
-                                            <p className="darkGrey">ROMAN FRANCISCO VAZ</p>
-                                            <p className="grey">
-                                                Member  </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        }>
-                        </TreeNode>
-
-
-                    </TreeNode>
-                    <TreeNode label={
-                    <div>
-                        <Button className='team-level'>Secretary</Button>
+                    <div key={ix}>
+                        <Button className='team-level'>{ d.designation ? d.designation :<></>}</Button>
                         <div className='team-content-block'>
                         <div className="team-block">
                             <div className="team-image">
                                 <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
                             </div>
                             <div className="team-content">
-                                <p className="darkGrey">Amrit Sakhalkar</p>
-                                <p className="grey">
-                                Secretary  </p>
+                                <p className="darkGrey">{ d.name ? d.name :<></>}</p>
+                                <p className="grey">{ d.designation ? d.designation :<></>}</p>
                             </div>
                         </div>
                     </div>
-                    
                     </div>
+                    
+                    </div>  
                 }>
-                        <TreeNode label={<div><Button>Staffs</Button></div>}>
+
+                    {d.member!==null ? d.member.map((j,jx)=>
+                    <TreeNode label={
+                        <div key={jx}>
+                            <Button className='team-level'>Ward No.{ j.wordNo ? j.wordNo :<></>}</Button>
+                            <div className='team-content-block'>
+                                <div className="team-block">
+                                    <div className="team-image">
+                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
+                                    </div>
+                                    <div className="team-content">
+                                        <p className="darkGrey">{ j.name ? j.name :<></>}</p>
+                                        <p className="grey">{ j.designation ? j.designation :<></>}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        }>
                             
-                            </TreeNode>
-                    </TreeNode>
+                        </TreeNode>
+                        ):<></>}
+
+                </TreeNode>
+                
+                ):<></>}
+                
                 </TreeNode>
                 
             </Tree>
-             
+            </Spin>
           </div>
       </>
   )

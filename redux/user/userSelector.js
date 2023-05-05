@@ -17,3 +17,7 @@ export const selectUserActive = createSelector(
     [selectUser],
     (user) => user.userActive
 )
+export const selectUserId = createSelector(
+    [selectUser],
+    (user) => user.userId
+)

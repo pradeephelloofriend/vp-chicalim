@@ -7,7 +7,8 @@ const INITIAL_STATE = {
     regCertData:null,
     regStatus:false,
     userUploadStatus:false,
-    tabKey:null
+    tabKey:null,
+    isLoading:false
     
 
 }
@@ -42,7 +43,12 @@ const menuReducer = (state = INITIAL_STATE, action) => {
                         return {
                             ...state,
                             tabKey: action.payload
-                        };  
+                        };
+                        case menuActionTypes.SET_IS_LOADING:
+                        return {
+                            ...state,
+                            isLoading: action.payload
+                        };   
        
         default:
             return state

@@ -9,7 +9,8 @@ const INITIAL_STATE = {
     isRegistration:false,
     tripData:null,
     userProfileData:[],
-    userActive:false
+    userActive:false,
+    userId:''
 }
 const UserReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
@@ -40,6 +41,12 @@ const UserReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 userActive: action.payload
+            }
+            case userActionTypes.SET_USER_ID:
+            //console.log('user cation',state.gUser)
+            return {
+                ...state,
+                userId: action.payload
             }
         default:
             return state

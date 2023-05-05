@@ -5,6 +5,7 @@ export const menuActionTypes = {
     SET_USER_UPLOAD_STATUS:'SET_USER_UPLOAD_STATUS',
     SET_REG_CERT_DATA:'SET_REG_CERT_DATA',
     SET_TAB_KEY:'SET_TAB_KEY',
+    SET_IS_LOADING:'SET_IS_LOADING',
  
    
 }
