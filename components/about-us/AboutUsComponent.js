@@ -75,7 +75,7 @@ const AboutUsComponent = ({routeTitle,menuData,tabKey,setTabKey}) => {
           window.addEventListener('resize', handleResize)
 
     },[menuData,routeTitle])
-    console.log('mData',mData)
+    // console.log('mData',mData)
 
    const {title}= router.query
   return (
