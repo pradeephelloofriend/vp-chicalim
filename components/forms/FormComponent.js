@@ -13,6 +13,7 @@ import DetailComponent from '../detail/DetailComponent';
 import FormTabDetailComponent from './FormTabDetailComponent';
 import TabDetailsComponent from '../about-us/TabDetailsComponent';
 import SpinningComponent from '../spin/SpinningComponent';
+import ProccedingComponent from './ProccedingComponent';
 const { TabPane } = Tabs;
 const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKey}) => {
     const [mData,setMdata]=React.useState(null);
@@ -99,11 +100,9 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
                                             <div className="caption1">
                                                 <h1>{t.node.label}</h1>
                                             </div>
-                                            {crData!==null?iscomplete=='Yes'?
-                                           
-                                            <FormTabDetailComponent  cDetailData={crData}/>
-                                            
-                                            : <TabDetailsComponent/> :<SpinningComponent/>  }
+                                            {t.node.route.code=='proceedings'?
+                                              <ProccedingComponent/>
+                                            : <TabDetailsComponent/> }
                                         </div>
                                         
                                  </TabPane>

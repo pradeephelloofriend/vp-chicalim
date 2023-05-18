@@ -6153,3 +6153,12 @@ tr td {
   padding: 10px 0px 10px 0px;
   border: 1px solid #28375f;
 }
+.proc-1-box{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.record-box {
+  display: flex;
+    gap: 10px;
+}

@@ -11,6 +11,7 @@ module.exports = {
     env:{
         // API_PATH:"http://localhost:1339",
         API_PATH:"https://speedtrack.co.in/wp-chicalim/wp-json/wp/v2/",
+        TEMP_GQL_API_PATH:'https://speedtrack.co.in/wp-vp-taleigao/graphql',//leter we remove it
         SQL_API_PATH:"https://speedtrack.co.in/api/react/vp-chicalim",
         WP_API_PATH:"https://speedtrack.co.in/wp-chicalim/wp-json/wp/v2/",
         GQL_API_PATH:'https://speedtrack.co.in/wp-chicalim/graphql',
