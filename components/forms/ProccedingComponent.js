@@ -61,7 +61,7 @@ const ProccedingComponent = () => {
                 return(
                     <>
                         <h6>{text.noOfAttendees}</h6>
-                        <a href={text.uploadAttendanceSheets} target='_blank'>{"View"}</a>
+                        <a href={text.uploadAttendanceSheets.mediaItemUrl} target='_blank'>{"View"}</a>
                         </>
                 )
               }
@@ -98,7 +98,7 @@ const ProccedingComponent = () => {
                     startTime:ele.proceedings.startTime,
                     duration:ele.proceedings.duration,
                     attendees:ele.proceedings.attendanceDetails,
-                    attachment:ele.proceedings.attachments.sourceUrl,
+                    attachment:ele.proceedings.attachments.mediaItemUrl,
                     ip:ele.proceedings.individualProceedings,
                     recorder:ele.proceedings.recorder
                     

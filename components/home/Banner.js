@@ -21,31 +21,31 @@ const Banner = ({sliderData}) => {
   //const Demo= sliderData.content.map(i=>i)
   //console.log('demo',Demo)
   const [slData,setSldata]=React.useState(null)
-  const [vilData, setVilData]=React.useState(null)
-    React.useEffect(()=>{
-        //setLoading(true)
-        let isApiSubscribed = true;
-        async function fetchData() {
-            
-            const cData = await getSliderHomeData() //applo client   
-            const vData = await getVillageData()
-            // 👇️ only update state if component is mounted
-            if (isApiSubscribed) {
-              // console.log('cData',cData)
-              // console.log('vilData',vilData)
-              setSldata(cData)
-              setVilData(vData)
+    const [vilData, setVilData]=React.useState(null)
+      React.useEffect(()=>{
+          //setLoading(true)
+          let isApiSubscribed = true;
+          async function fetchData() {
+              
+              const cData = await getSliderHomeData() //applo client   
+              const vData = await getVillageData()
+              // 👇️ only update state if component is mounted
+              if (isApiSubscribed) {
+                // console.log('cData',cData)
+                // console.log('vilData',vilData)
+                setSldata(cData)
+                setVilData(vData)
+              }
             }
-          }
-         
-          fetchData()
-          return () => {
-            // cancel the subscription
-            isApiSubscribed = false;
-          };
-    },[])
-    // console.log('slData',slData)
-    // console.log('vilData',vilData)
+          
+            fetchData()
+            return () => {
+              // cancel the subscription
+              isApiSubscribed = false;
+            };
+      },[])
+      // console.log('slData',slData)
+      // console.log('vilData',vilData)
     return (
       <>
        <section className="wrapper ">

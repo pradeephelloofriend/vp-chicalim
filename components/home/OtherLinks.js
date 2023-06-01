@@ -4,8 +4,10 @@ import { NotificationOutlined, HomeOutlined, ProjectOutlined, TeamOutlined, Form
 import { getNoticeHomeData } from '../../lib/api';
 import { useRouter } from 'next/router'
 import { setTabKey } from '../../redux/menu/menuAction';
+import { createStructuredSelector } from 'reselect';
+import { connect } from 'react-redux';
 
-const OtherLinks = () => {
+const OtherLinks = ({setTabKey}) => {
     //console.log('noticedata1',noticeData)
     const [nData,setNdata]=React.useState(null)
    
@@ -135,5 +137,8 @@ const OtherLinks = () => {
          
     )
 }
-    
-export default OtherLinks
+
+const mapDispatchToProps=dispatch=>({
+    setTabKey:(data)=>dispatch(setTabKey(data))
+})
+export default connect(null,mapDispatchToProps) (OtherLinks)
