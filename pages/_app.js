@@ -33,29 +33,29 @@ function MyApp({ Component, pageProps }) {
         <PersistGate persistor={store.__persistor} >
             <SimpleReactLightbox>
                 <MainLayout>
-                <Head>
-                    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-                    <title>Welcome Village Panchayat,Dongurli,Goa</title>
-                    <meta charset="UTF-8" />
-                    <meta name="keywords" content="village panchyat;village panchyat Dongurli; Dongurli; goa;Village Panchayat of Dongurli Salcete Goa;Dongurli Panchayat;Dongurli Verna Panchayat;South Goa Dongurli Panchayat;" />
+                    <Head>
+                        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+                        <title>Welcome Village Panchayat,Chicalim,Goa</title>
+                        <meta charset="UTF-8" />
+                        <meta name="keywords" content="village panchayat;village panchyat Chicalim; Chicalim; goa;Village Panchayat of Chicalim  Goa;Chicalim Panchayat;Chicalim Panchayat;South Goa Chicalim Panchayat;" />
                         <meta name="author" content="Kamsoft Technology, Goa" />
                         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-                        <meta name="title" content="Village Panchayat Dongurli" />
-                        <meta name="description" content="Village Panchayat Dongurli,Government Of Goa"/>
-                        
+                        <meta name="title" content="Village Panchayat Chicalim" />
+                        <meta name="description" content="Village Panchayat Chicalim,Government Of Goa" />
+
                         <meta name="robots" content="index, follow" />
                         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                         <meta name="language" content="English" />
                         <meta name="revisit-after" content="15 days" />
-                </Head>
+                    </Head>
                     <Component {...pageProps} />
-                   
+
                 </MainLayout>
             </SimpleReactLightbox>
         </PersistGate>
-                    
-    ) 
+
+    )
 
 
 }
