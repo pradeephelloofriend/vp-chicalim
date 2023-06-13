@@ -27,9 +27,9 @@ const TopHeaderAreaComponent = ({setRegStatus,cUser}) => {
                         <div className="col-lg-8">
                             <div className="header-content-right">
                                 
-                                    <a href="tel:+822456974" className="me-xl-8 text-dblue">
+                                    <a href="tel:7588405843" className="me-xl-8 text-dblue">
                                     <i className="fa fa-mobile me-xl-1"></i>
-                                        Call Us For Inquiry: 0832-2540226
+                                        Call Us For Inquiry:7588405843
                                     </a>
                                     <a href="mailto:hello@surety.com" className="me-xl-8 text-dblue">
                                     <i className="fa fa-envelope-o me-xl-1"></i>

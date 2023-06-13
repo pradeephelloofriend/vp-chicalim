@@ -37,7 +37,7 @@ import {selectFootData} from '../../redux/footer/footSelector';
                      <div className="c-footer-pd text-center">
                             <p className="mb-2 mb-lg-0 adress-block">
                                 <span className='mr-5'><i className="fa fa-map-marker" aria-hidden="true"></i> Village Panchayat of Chicalim H. No. 163 A, PO-Chicalim,Mormugao Goa -403711</span>
-                                <span className='mr-5'><i className="fa fa-phone" aria-hidden="true"></i> 0832-2540226</span>
+                                <span className='mr-5'><i className="fa fa-phone" aria-hidden="true"></i>7588405843</span>
                                 <span className='mr-5'> <i className="fa fa-envelope-o" aria-hidden="true"></i> vpchicalim@gmail.com</span></p>
                          <p className="mb-2 mb-lg-0">© 2023 VPChicalim. All rights reserved.</p>
                      </div>
