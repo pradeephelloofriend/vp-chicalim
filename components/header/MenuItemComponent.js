@@ -56,6 +56,14 @@ const MenuItemComponent = ({ menuData ,setTabKey}) => {
 
                         
             </Nav>
+
+            {/* <div className="d-flex flex-row align-items-center nav-menu-right bg-orange" onClick={() => goToPage('hall-book/', 'hall-book', 'hall-book', 'hall-book', '', 'Yes')}>
+                
+                <div className="div1call">
+                    <p className='mb-0' >Book Hall</p>
+                    
+                </div>
+            </div> */}
         </>
     )
 }

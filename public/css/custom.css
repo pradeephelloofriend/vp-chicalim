@@ -6162,3 +6162,10 @@ tr td {
   display: flex;
     gap: 10px;
 }
+.bg-orange{
+  margin: 0px 0px 0px 12px;
+  padding: 0px 6px 0px 5px;
+  color: black;
+  border: 1px solid orange;
+  border-radius: 10px;
+}
