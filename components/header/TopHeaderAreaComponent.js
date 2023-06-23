@@ -4,9 +4,11 @@ import {createStructuredSelector} from 'reselect'
 import { setRegStatus } from '../../redux/menu/menuAction';
 import { selectCuser } from '../../redux/user/userSelector';
 import LoginModalComponent from '../modal/LoginModalComponent'
+import BookingListModal from '../modal/BookingListModal';
 
 const TopHeaderAreaComponent = ({setRegStatus,cUser}) => {
     const [show,setShow]=React.useState(false)
+    const [show1,setShow1]=React.useState(false)
   const handleShow = () => {
       setShow(true)
   };
@@ -14,6 +16,13 @@ const TopHeaderAreaComponent = ({setRegStatus,cUser}) => {
     setShow(false)
     setRegStatus(false)
   };
+    const handleShow1 = () => {
+        setShow1(true)
+    };
+    const handleClose1 = () => {
+    setShow1(false)
+    
+    };
     return (
         <>
             <div className="top-header-area">
@@ -31,9 +40,13 @@ const TopHeaderAreaComponent = ({setRegStatus,cUser}) => {
                                     <i className="fa fa-mobile me-xl-1"></i>
                                         Call Us For Inquiry:7588405843
                                     </a>
-                                    <a href="mailto:hello@surety.com" className="me-xl-8 text-dblue">
+                                    <a href="mailto:hello@surety.com" className="me-xl-8 text-dblue ">
                                     <i className="fa fa-envelope-o me-xl-1"></i>
                                         Email: vpchicalim@gmail.com
+                                    </a>
+                                    <a href="#" onClick={()=>handleShow1()} className="me-xl-8 text-dblue blink1">
+                                    <i className="fa fa-angle-double-right me-xl-1 "></i>
+                                        View hall booking list
                                     </a>
                                     {cUser!==null?
                                     <a href="#" onClick={()=>handleShow()} className="text-red">
@@ -58,6 +71,11 @@ const TopHeaderAreaComponent = ({setRegStatus,cUser}) => {
             show={show}
             onClick={handleClose}
             onHide={handleClose}
+            />
+            <BookingListModal
+            show={show1}
+            onClick={handleClose1}
+            onHide={handleClose1}
             />
         </>
     )

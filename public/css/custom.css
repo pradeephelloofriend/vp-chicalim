@@ -5185,11 +5185,15 @@ padding-left: 0rem;
   background-color: #E6E2C3;
 }
 .slider-bottom-bar .kam-topbar-left .sm-btm-right>li .anticon {
-  font-size: 30px;
+  font-size: 20px;
+}
+.slider-bottom-bar .kam-topbar-left .sm-btm-right>li a {
+  font-size: 12px;
 }
 .slider-bottom-bar .kam-topbar-left .sm-btm-right{
   position: relative;
-  margin-top: 30px;
+  margin-top: 14px;
+  margin-bottom: 14px;
   /* margin-left: 48px; */
   flex-wrap: wrap;
 }
@@ -5205,11 +5209,18 @@ padding-left: 0rem;
 
 }
 .marquee-box{
-  /* margin-top: 0px; */
-  margin-top: 60px;
+  padding: 8px 0;
+  display: flex;
+  /* gap: 44px; */
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-top: 15px;
+}
+.mar-title{
+width: 17%;
 }
 .marquee a{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 100;
 }
 @media only screen and (max-width: 991px) {
@@ -5448,6 +5459,20 @@ margin-top: 24px;
   height: 19px;
   line-height: 14px;
 }
+.blink1 {
+  -webkit-animation: pulse3 400ms infinite alternate;
+  animation: pulse3 400ms infinite alternate;
+  padding: 2px 10px;
+  width: 50px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-left: 5px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  height: 19px;
+  line-height: 14px;
+}
 @-webkit-keyframes pulse2 {
   0% {
       background-color: #7f7544;
@@ -5467,6 +5492,25 @@ margin-top: 24px;
       background-color: #ff0000;
   }
 } 
+@-webkit-keyframes pulse3 {
+  0% {
+      color: #5c77d6;
+  }
+
+  100% {
+      color: #183392;
+  }
+}
+
+@keyframes pulse3 {
+  0% {
+      color: #5c77d6;
+  }
+
+  100% {
+      color: #183392;
+  }
+}
 .dev-card .ant-card-body{
   padding: 0px;
 }
@@ -6027,12 +6071,7 @@ border: 0px;
   color: #28375f;
 }
 
-.slider-bottom-bar .kam-topbar-left .sm-btm-right{
-  /* position: absolute; */
-  margin-top: 30px;
-  /* margin-left: 48px; */
-  flex-wrap: wrap;
-}
+
 
 .allheadcolor {
   color: #28375f;
@@ -6113,10 +6152,7 @@ border: 0px;
 .news-links {
   background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   color: white;
-  border: 2px solid #28375f;
-  margin: 15px 0px 15px 0px;
-  /* padding: 10px; */
-  border-radius: 50px 20px;
+ 
 }
 
 .latest-title-box{
@@ -6168,4 +6204,11 @@ tr td {
   color: black;
   border: 1px solid orange;
   border-radius: 10px;
+}
+.hall-book .ant-btn.ant-btn-background-ghost {
+  color: #bad7e9;
+  border-color: #bad7e9;
+}
+.hb-form .ant-form-item{
+  margin-bottom: 12px;
 }

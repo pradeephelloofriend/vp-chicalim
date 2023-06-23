@@ -17,7 +17,7 @@ const HallBookingComponent = () => {
     const [form] = Form.useForm();
     const { getFieldDecorator } =form;
     const[isLoading,setIsLoading]=React.useState(false)
-    console.log(moment().format('DDMMYYYY'))
+    //console.log(moment().format('DDMMYYYY'))
     const imgUpload = React.useRef(null);
     const [img, setImg] = React.useState(''); 
     const [crData,setCrData]=React.useState(null)
@@ -50,10 +50,10 @@ const HallBookingComponent = () => {
             isApiSubscribed = false;
           };
     },[])
-    console.log('facility type',crData)
+    //console.log('facility type',crData)
     const handleChange = ({ fileList: newFileList }) => setFileList(newFileList);
     function onChangeDate(date, dateString) {
-        console.log('date', moment(date._d).format('YYYY-MM-DD HH:mm:ss'));
+        //console.log('date', moment(date._d).format('YYYY-MM-DD HH:mm:ss'));
         setBookDate(moment(date._d).format('YYYY-MM-DD HH:mm:ss'))
     }
    
@@ -65,11 +65,11 @@ const HallBookingComponent = () => {
         formData.append("title", imgList.name);
         const userAr=[]
         values.users.forEach(element => {
-            userAr.push(element.typework+': <br/>\r\n Name:'+element.fullname+'<br/>\r\n Contact:'+element.contact+'<br/>\r\n')
+            userAr.push(element.typework+':\r\nName:'+element.fullname+'\r\nContact:'+element.contact)
         });
         
-        let userArData='<br/>\r\n'+userAr.join('').toString()
-        console.log('values-data',userArData)
+        let userArData='\r\n'+userAr.join('').toString()
+        //console.log('values-data',userArData)
         try {
             setIsLoading(true)
             Axios.post(`/api/hallBooking/idUpload`,formData,{ 
@@ -78,7 +78,7 @@ const HallBookingComponent = () => {
             },
             })
             .then(({data})=>{
-                console.log('image return data',data)
+                //console.log('image return data',data)
                 const dataTemp={
                     dob:moment(values.dobk._d).format('YYYY-MM-DD HH:mm:ss'),
                     noh:values.nohrs,
@@ -107,7 +107,7 @@ const HallBookingComponent = () => {
                               marginTop: '40vh',
                             },
                           });*/
-                        console.log('api-taxi-data',data)
+                        //console.log('api-taxi-data',data)
                         
                     })
                     
@@ -120,7 +120,7 @@ const HallBookingComponent = () => {
             
         }
         /**/
-        console.log('Success:', values);
+        //console.log('Success:', values);
       };
       const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
@@ -135,7 +135,7 @@ const HallBookingComponent = () => {
                 name="basic"
                 form={form}
                 layout='vertical'
-                
+                className='hb-form'
                 initialValues={{
                     remember: true,
                 }}
@@ -348,18 +348,17 @@ const HallBookingComponent = () => {
             </>
             )}
             </Form.List>
+            
                 </Card>
-             
+                <Form.Item className='mt-10'
+                    
+                    >
+                        <Button type="primary" htmlType="submit" block  >Book Now</Button>
+                    </Form.Item>
 
-                <Form.Item
-                    wrapperCol={{
-                        offset: 6,
-                        span: 16,
-                    }}
-                >
-                    <Button type="primary" htmlType="submit"  >Submit</Button>
-                </Form.Item>
+                
              </div>
+             
             </div>
             </Form>
             

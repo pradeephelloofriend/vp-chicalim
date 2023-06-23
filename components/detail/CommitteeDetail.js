@@ -16,7 +16,7 @@ const { Panel } = Collapse;
 const { TabPane } = Tabs;
 
 const CommitteeDetail = ({regCertData,cDetailData}) =>{
-  console.log('cDetailData answer',cDetailData)
+  //console.log('cDetailData answer',cDetailData)
     const{members}=cDetailData
     const [show,setShow]=React.useState(false)
     const[regData,setRegData]=React.useState(null)
@@ -73,7 +73,7 @@ const CommitteeDetail = ({regCertData,cDetailData}) =>{
       setShow(false)
       //setRegStatus(false)
     };   
-  console.log('cDetailData',cDetailData)
+  //console.log('cDetailData',cDetailData)
     // console.log('applicationTab.members',applicationTab.members)
 
 

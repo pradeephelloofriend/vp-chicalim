@@ -46,31 +46,28 @@ const OtherLinks = ({setTabKey}) => {
     }
 
     return (
-        <section className='slider-bottom-bar bg-light-orange'>
-            <div className='container'>
+        <section className='slider-bottom-bar bg-light'>
+            <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-md-6'>
+                        <div className='mar-container'>
                         <div className='marquee-box'>
-                            <div className="row text-center">
-                                <div className="col-md-2">
-                                    <h6 className="allheadcolor">What's New</h6>
-                                </div>
-                                
-                                <div className="col-md-10">
-
-                                    <Marquee
+                            <div className='mar-title'>
+                                <a className="text-white blink">What's New</a>
+                            </div>
+                            <Marquee
                                         gradient={false}
                                         speed={50}
+                                        pauseOnHover={true}
                                     >
                                         {nData!==null?nData.map((data, index) =>
                                             <a key={index} className="text-black ms-7">{data.notices.title
                                             }</a>
                                         ):<></>}
                                     </Marquee>
-                                </div>
-
-                            </div>
                         </div>
+                        </div>
+                        
                     </div>
                     
                     <div className='col-md-6 news-links'>

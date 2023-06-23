@@ -72,7 +72,7 @@ const DetailComponent = ({regCertData,cDetailData}) =>{
       //setRegStatus(false)
     };   
   //console.log('cDetailData',cDetailData)
-    console.log('applicationTab.cardMenuBox new',applicationTab.cardMenuBox)
+    //console.log('applicationTab.cardMenuBox new',applicationTab.cardMenuBox)
 
 
   return (

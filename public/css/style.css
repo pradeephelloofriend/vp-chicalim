@@ -10151,8 +10151,8 @@ textarea.form-control.is-invalid {
 
 .text-white {
     --bs-text-opacity: 1;
-    /* color: #fff !important */
-    color: #000000 !important
+    color: #fff !important
+   
 }
 
 .text-light {
