@@ -18,12 +18,22 @@ const BookingListModal = ({show,onHide}) => {
         async function fetchData() {
             const cData = await getHallBookingList()//applo client  
             // 👇️ only update state if component is mounted
+            console.log('cddatahalllist',cData)
             if (isApiSubscribed) {
                 let arr=[]
-                cData.forEach(element => {
-                    arr.push(element.hall_booking)
+                cData.forEach(elt => {
+                    arr.push({
+                        booingId:elt.databaseId, 
+                        hirer:elt.hall_booking.hirer,
+                        event:elt.hall_booking.event,
+                        bookingDate:elt.hall_booking.bookingDate,
+                        contactNumber:elt.hall_booking.contactNumber,
+                        address:elt.hall_booking.address,
+                        facilityInformation:elt.hall_booking.facilityInformation
+                    })
                 });
                 setCrData(arr)
+                console.log('arr',arr)
                 setIsLoading(false)
             }
           }

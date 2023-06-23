@@ -87,14 +87,16 @@ const HallBookingComponent = () => {
                     address:values.address,
                     contact:values.contact,
                     imgId:data.id,
-                    bkId:"HB/"+moment().format('DDMMYYYY')+"/"+data.id,
+                    //bkId:"HB/"+moment().format('DDMMYYYY')+"/"+data.id,
                     fInfo:userArData
                 }
-                setBooikngId("HB/"+moment().format('DDMMYYYY')+"/"+data.id)
+                
                 try {
                     
                     Axios.post(`/api/hallBooking/addNewBooking`,{dataTemp})
                     .then(({ data }) => {
+                        //console.log('after booking',data)
+                        setBooikngId(data.id)
                         setShow(true)
                         form.resetFields()
                         setFileList([])

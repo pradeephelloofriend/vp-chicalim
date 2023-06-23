@@ -6,9 +6,12 @@ import { createStructuredSelector } from 'reselect';
 
 
 import { Modal, Toast } from 'react-bootstrap';
-
+import { getHallBookingById } from '../../lib/api';
+import jsPDF from "jspdf";
+import "jspdf-autotable";
+import HallBookingDownloadComponent from '../hall-book/HallBookingDownloadComponent';
 const BookingSuccesModalComponent = ({show,onHide,bookingId}) => {
-    
+   
   return (
       <>
           <Modal
@@ -24,15 +27,7 @@ const BookingSuccesModalComponent = ({show,onHide,bookingId}) => {
                   <i class="fa fa-times " aria-hidden="true"></i>
               </button>
               <Modal.Body className='p-2'>
-                  <Result
-                      status="success"
-                      title="Hall is booked"
-                      subTitle={<a>Please save your Booking Number: <span className='text-danger'><b><u>{bookingId}</u></b></span></a> }
-                      extra={[
-                          
-                          <Button onClick={() => onHide()} key="buy">OK</Button>,
-                      ]}
-                  />
+                  <HallBookingDownloadComponent bookingId={bookingId} onHide={onHide}/>
               </Modal.Body>
 
           </Modal>

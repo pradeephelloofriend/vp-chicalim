@@ -29,7 +29,6 @@ export default async function addNewBooking(req, res) {
                         "ID": dataTemp.imgId,
                        "id":dataTemp.imgId 
                     } ,
-                    "booing_id": dataTemp.bkId,
                     "facility_information": dataTemp.fInfo
 
                 }
