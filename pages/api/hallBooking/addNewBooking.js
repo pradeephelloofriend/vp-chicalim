@@ -7,6 +7,7 @@ export default async function addNewBooking(req, res) {
      * slug[0]=item id,slug[1]=quantity,slug[2]=userid
      */
     //let data
+    
     try{
         const result= await fetch(`${API_URL}hall_booking`, {
             method: "POST",
@@ -20,7 +21,6 @@ export default async function addNewBooking(req, res) {
                 "status": "publish",
                 "fields": {
                     "booking_date": dataTemp.dob,
-                    "number_of_hour": dataTemp.noh,
                     "event": dataTemp.event,
                     "hirer": dataTemp.hirer,
                     "address": dataTemp.address,
@@ -29,7 +29,8 @@ export default async function addNewBooking(req, res) {
                         "ID": dataTemp.imgId,
                        "id":dataTemp.imgId 
                     } ,
-                    "facility_information": dataTemp.fInfo
+                    "facility_information": dataTemp.fInfo,
+                    "slot_taken":dataTemp.noh.toString()
 
                 }
             })

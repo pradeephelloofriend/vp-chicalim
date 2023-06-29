@@ -1,20 +1,23 @@
 import React from 'react'
 import {Result,Button} from 'antd'
-import { getHallBookingById } from '../../lib/api';
+import { getHallBookingById, getHallBookingSlots } from '../../lib/api';
 import jsPDF from "jspdf";
 import "jspdf-autotable";
 const HallBookingDownloadComponent = ({onHide,bookingId}) => {
     const[isLoading,setIsLoading]=React.useState(false)
     const [crData,setCrData]=React.useState(null)
+    const [hbSlotData,setHbslotData]=React.useState(null)
     React.useEffect(()=>{
         let isApiSubscribed = true;
         setIsLoading(true)
         async function fetchData() {
             const cData = await getHallBookingById(Number(bookingId))//applo client  
+            const hbSlot=await getHallBookingSlots()
             // 👇️ only update state if component is mounted
-            console.log('cddatahalllist',cData)
+            //console.log('cddatahalllist',cData)
             if (isApiSubscribed) {
                 let arr=[]
+                
                 /*cData.forEach(elt => {
                     arr.push({
                         booingId:elt.databaseId, 
@@ -26,6 +29,7 @@ const HallBookingDownloadComponent = ({onHide,bookingId}) => {
                         facilityInformation:elt.hall_booking.facilityInformation
                     })
                 });*/
+                setHbslotData(hbSlot)
                 setCrData(cData)
                 //console.log('arr',arr)
                 setIsLoading(false)
@@ -42,6 +46,18 @@ const HallBookingDownloadComponent = ({onHide,bookingId}) => {
           };
     },[bookingId])
     const exportPDF = () => {
+      const sTaken=crData.hall_booking.slotTaken.split(',')
+                const sArry=[]
+                        sTaken.forEach(ex => {
+                           const tempData=hbSlotData.find((x)=>{return ex==x.termTaxonomyId})
+                           //console.log('tempdata',tempData)
+                           
+                           /*tempData.forEach(ed => {
+                            
+                           });*/
+                           sArry.push(tempData.name)
+                            
+                        });
         const unit = "pt";
         const size = "A4"; // Use A1, A2, A3 or A4
         const orientation = "landscape"; // portrait or landscape
@@ -52,13 +68,14 @@ const HallBookingDownloadComponent = ({onHide,bookingId}) => {
         doc.setFontSize(15);
     
         const title = "Hall Booking Information";
-        const headers = [["Id","Name","Event", "Date","Contact","Address","Facility"]];
+        const headers = [["Id","Name","Event", "Date","Slot","Contact","Address","Facility"]];
     
         const data =[[
             crData.databaseId, 
             crData.hall_booking.hirer,
             crData.hall_booking.event,
             crData.hall_booking.bookingDate,
+            sArry.toString(),
             crData.hall_booking.contactNumber,
             crData.hall_booking.address,
             crData.hall_booking.facilityInformation 

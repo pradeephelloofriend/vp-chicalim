@@ -1,7 +1,7 @@
 import React from 'react'
 import { Modal, Toast } from 'react-bootstrap';
 import { Button, Checkbox, Form, Input, InputNumber,Typography } from 'antd';
-import { getHallBookingList } from '../../lib/api';
+import { getHallBookingList, getHallBookingSlots } from '../../lib/api';
 import jsPDF from "jspdf";
 import "jspdf-autotable";
 const{Text}=Typography
@@ -16,12 +16,26 @@ const BookingListModal = ({show,onHide}) => {
         let isApiSubscribed = true;
         setIsLoading(true)
         async function fetchData() {
-            const cData = await getHallBookingList()//applo client  
+            const cData = await getHallBookingList()//applo client 
+            const hbSlot=await getHallBookingSlots() 
             // 👇️ only update state if component is mounted
-            console.log('cddatahalllist',cData)
+            //console.log('cddatahalllist',cData)
             if (isApiSubscribed) {
                 let arr=[]
                 cData.forEach(elt => {
+                    const sTaken=elt.hall_booking.slotTaken.split(',')
+                    const sArry=[]
+                        sTaken.forEach(ex => {
+                           const tempData=hbSlot.find((x)=>{return ex==x.termTaxonomyId})
+                           //console.log('tempdata',tempData)
+                           
+                           /*tempData.forEach(ed => {
+                            
+                           });*/
+                           sArry.push(tempData.name)
+                            
+                        });
+
                     arr.push({
                         booingId:elt.databaseId, 
                         hirer:elt.hall_booking.hirer,
@@ -29,11 +43,12 @@ const BookingListModal = ({show,onHide}) => {
                         bookingDate:elt.hall_booking.bookingDate,
                         contactNumber:elt.hall_booking.contactNumber,
                         address:elt.hall_booking.address,
-                        facilityInformation:elt.hall_booking.facilityInformation
+                        facilityInformation:elt.hall_booking.facilityInformation,
+                        slotTaken:sArry.toString()
                     })
                 });
                 setCrData(arr)
-                console.log('arr',arr)
+                //console.log('arr',arr)
                 setIsLoading(false)
             }
           }
@@ -55,9 +70,9 @@ const BookingListModal = ({show,onHide}) => {
         doc.setFontSize(15);
     
         const title = "Hall Booking List";
-        const headers = [["Id","Name","Event", "Date","Contact","Address","Facility"]];
+        const headers = [["Id","Name","Event", "Date","Slot","Contact","Address","Facility"]];
     
-        const data = crData.map(elt=> [elt.booingId, elt.hirer,elt.event,elt.bookingDate,elt.contactNumber,elt.address,elt.facilityInformation]);
+        const data = crData.map(elt=> [elt.booingId, elt.hirer,elt.event,elt.bookingDate,elt.slotTaken,elt.contactNumber,elt.address,elt.facilityInformation]);
     
         let content = {
           startY: 50,

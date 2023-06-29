@@ -6212,3 +6212,24 @@ tr td {
 .hb-form .ant-form-item{
   margin-bottom: 12px;
 }
+.hb-chkbox .ant-checkbox-wrapper{
+  border: 1px solid #dedede;
+  padding-left: 7px;
+  border-radius: 3px;
+}
+.hb-chkbox .ant-checkbox-wrapper.ant-checkbox-wrapper-disabled {
+  cursor: not-allowed;
+  border-color: rgb(245 0 0 / 25%) !important;
+}
+.hb-chkbox .ant-checkbox-disabled + span {
+  color: rgb(245 0 0 / 25%);
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+.hb-chkbox .ant-checkbox-disabled .ant-checkbox-inner {
+  background-color: rgb(245 0 0 / 25%);
+  border-color: #d9d9d9 !important;
+}
+.hb-form .ant-tooltip-disabled-compatible-wrapper{
+margin-right: 8px
+}
