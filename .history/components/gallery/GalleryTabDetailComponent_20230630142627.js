@@ -37,7 +37,7 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
 
         <div className=''>
             <Tabs className='g-cat-tab' activeKey={tabKey} onTabClick={(key) => setTabKey(key)} tabPosition={'top'}>
-               {cDetailData.map(g=>
+               {cDetailData.map((g=>
                <TabPane tab={g.name} key={g.termTaxonomyId}>
                <Spin spinning={isLoading}>
                   {   

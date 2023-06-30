@@ -37,8 +37,10 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
 
         <div className=''>
             <Tabs className='g-cat-tab' activeKey={tabKey} onTabClick={(key) => setTabKey(key)} tabPosition={'top'}>
-               {cDetailData.map(g=>
-               <TabPane tab={g.name} key={g.termTaxonomyId}>
+               {cDetailData.map((g,gix)=>
+               <>
+               
+               <TabPane key={gix} tab={g.name} key={g.termTaxonomyId}>
                <Spin spinning={isLoading}>
                   {   
                       gData.length>=0?gData.map((g,idx)=>
@@ -49,9 +51,9 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
                                   {g.gallery.content.map((d,ix)=>
                                       <div key={ix} className='img-box'>
                                               {d.image.map((i,is)=> 
-                                              <div className='iv-content' key={is}>
-                                                  {d.categoryName.name=='photo'? 
-                                                  <img src={i.sourceUrl} alt=''/>
+                                              <div className='iv-content'>
+                                                  {d.categoryName.name=='photo'?
+                                                  <img key={is} src={i.sourceUrl} alt=''/>
                                                           :
                                                           
                                                           <Player
@@ -79,6 +81,7 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
                   </Spin>
                </TabPane>
                
+               </>
                )}
                 
 

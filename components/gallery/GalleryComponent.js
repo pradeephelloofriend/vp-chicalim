@@ -5,12 +5,13 @@ import {selectMenuData,selectTabKey} from '../../redux/menu/menuSelector'
 import {setTabKey} from '../../redux/menu/menuAction'
 import {Tabs,Card,Spin } from 'antd';
 import { useRouter } from 'next/router'
-import {getMediaGalleryData} from '../../lib/api'
+import {getGalleryCat} from '../../lib/api'
 
 import Axios from 'axios';
 
 import TabDetailsComponent from '../about-us/TabDetailsComponent';
 import GalleryTabDetailComponent from './GalleryTabDetailComponent';
+
 const { TabPane } = Tabs;
 const GalleryComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKey}) => {
     const [mData,setMdata]=React.useState(null);
@@ -33,12 +34,14 @@ const GalleryComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTa
             if(isApiSubscribed){
               if(tabKey=='/photos-and-video/'){
                 async function fetchData() {
-                  const cData = await getMediaGalleryData() //applo client  
+                  const cData = await getGalleryCat() //applo client  
             
                   // 👇️ only update state if component is mounted
                   if (isApiSubscribed) {
                     setCrData(cData)
                     setIsLoading(false)
+
+                    console.log("new data", cData)
                   }
                 }
                 fetchData()
@@ -91,7 +94,7 @@ const GalleryComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTa
     },[menuData,routeTitle,tabKey])
     
     
-   const {title,desc,iscomplete}= router.query
+   const {iscomplete}= router.query
    //console.log('crData',crData)
   return (
     <>
@@ -110,8 +113,6 @@ const GalleryComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTa
                                             </div>
                                             {crData!==null&&iscomplete=='Yes'?
                                            <GalleryTabDetailComponent cDetailData={crData}/>
-                                            
-                                            
                                             : <></>   }
                                         </div>
                                         </Spin>
