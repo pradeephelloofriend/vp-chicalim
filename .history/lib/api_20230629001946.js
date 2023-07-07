@@ -413,30 +413,29 @@ export async function getGalleryByCat(catId) {
   const data = await fetchAPI(`
   query getGalleryByCat {
     mediaSubcategories(where: {termTaxonomyId: "${catId}"}) {
+      nodes {
+        termTaxonomyId
+        name
+        mediaGalleries {
           nodes {
-            termTaxonomyId
-            name
-            mediaGalleries {
-              nodes {
-                title
-                gallery {
-                  content {
-                    categoryName {
-                      name
-                      termTaxonomyId
-                    }
-                    image {
-                      title
-                      sourceUrl
-                      mediaItemUrl
-                    }
-                  }
+            title
+            gallery {
+              content {
+                categoryName {
+                  name
+                  termTaxonomyId
+                }
+                image {
+                  sourceUrl
+                  title
                 }
               }
             }
           }
         }
       }
+    }
+  }
   `)
   return data?.mediaSubcategories?.nodes
 }

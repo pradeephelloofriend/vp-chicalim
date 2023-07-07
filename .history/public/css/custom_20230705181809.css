@@ -341,7 +341,6 @@ font-weight: bold;
 
 .g-box-content .img-box{
   display: flex;
-  justify-content: left;
   gap: 20px;
   flex-wrap: wrap;
   position: relative;

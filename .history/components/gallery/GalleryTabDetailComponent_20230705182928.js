@@ -53,7 +53,7 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
                                                   {d.categoryName.name=='photo'? 
                                                   <img src={i.mediaItemUrl} alt=''/>
                                                           :
-                                                          <Player style={{width: 100}}
+                                                          <Player stl
                                                               playsInline
                                                               //poster="/assets/poster.png"
                                                               src={i.mediaItemUrl}

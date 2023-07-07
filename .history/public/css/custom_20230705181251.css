@@ -345,8 +345,12 @@ font-weight: bold;
   gap: 20px;
   flex-wrap: wrap;
   position: relative;
-} 
+}
+.video-box {
+  position: relative;
+  justify-content: center;
 
+}
 .img-tag-box {
   position: relative;
   bottom: 35px;

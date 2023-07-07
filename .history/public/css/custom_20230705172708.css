@@ -345,8 +345,7 @@ font-weight: bold;
   gap: 20px;
   flex-wrap: wrap;
   position: relative;
-} 
-
+}
 .img-tag-box {
   position: relative;
   bottom: 35px;
@@ -6252,3 +6251,6 @@ tr td {
   margin-bottom: 12px;
 }
 
+.video_div{
+  max-width: 200px !important;
+}

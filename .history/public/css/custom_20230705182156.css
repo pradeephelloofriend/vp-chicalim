@@ -339,7 +339,7 @@ font-weight: bold;
   color: black;
 }
 
-.g-box-content .img-box{
+.g-box-content .img-box .{
   display: flex;
   justify-content: left;
   gap: 20px;

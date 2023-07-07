@@ -22,7 +22,7 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
                 const cData = await getGalleryByCat(Number(tabKey)) //applo client  
                 // 👇️ only update state if component is mounted
                 if (isApiSubscribed) {
-                   setGdata(cData[0].mediaGalleries.nodes)
+                //   setGdata(cData[0].mediaGalleries.nodes)
                   setIsLoading(false)
                   console.log('cdata-grqaphql',cData)
                 }
@@ -51,12 +51,13 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
                                               {d.image.map((i,is)=> 
                                               <div className='iv-content' key={is}>
                                                   {d.categoryName.name=='photo'? 
-                                                  <img src={i.mediaItemUrl} alt=''/>
+                                                  <img src={i.sourceUrl} alt=''/>
                                                           :
-                                                          <Player style={{width: 100}}
+                                                          
+                                                          <Player
                                                               playsInline
                                                               //poster="/assets/poster.png"
-                                                              src={i.mediaItemUrl}
+                                                              src={i.sourceUrl}
                                                           />
                                                   }
                                                   <div className='img-tag-box'>

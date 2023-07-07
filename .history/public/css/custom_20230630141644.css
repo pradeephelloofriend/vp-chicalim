@@ -345,8 +345,7 @@ font-weight: bold;
   gap: 20px;
   flex-wrap: wrap;
   position: relative;
-} 
-
+}
 .img-tag-box {
   position: relative;
   bottom: 35px;
@@ -354,30 +353,6 @@ font-weight: bold;
 }
 .badge-txt {
   color: black;
-}
-.caption1 h1:before {
-  content: '';
-  display: block;
-  width: 5px;
-  height: 35px;
-  background-color: #97b946;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.caption1 h1 {
-  position: relative;
-  padding-left: 20px;
-  border-bottom: 1px solid #ded9d9;
-  padding-bottom: 5px;
-  font-size: 180%;
-  font-weight: 600;
-}
-.page-content p {
-  text-align: justify;
-  font-size: 90%;
-  line-height: 26px;
 }
 
 
@@ -6251,4 +6226,3 @@ tr td {
 .hb-form .ant-form-item{
   margin-bottom: 12px;
 }
-

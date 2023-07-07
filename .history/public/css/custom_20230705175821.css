@@ -338,6 +338,14 @@ font-weight: bold;
   top: 35%;
   color: black;
 }
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 100;
+  width: 100%;
+}
+
+
 
 .g-box-content .img-box{
   display: flex;
@@ -345,8 +353,7 @@ font-weight: bold;
   gap: 20px;
   flex-wrap: wrap;
   position: relative;
-} 
-
+}
 .img-tag-box {
   position: relative;
   bottom: 35px;

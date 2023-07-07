@@ -51,9 +51,9 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
                                               {d.image.map((i,is)=> 
                                               <div className='iv-content' key={is}>
                                                   {d.categoryName.name=='photo'? 
-                                                  <img src={i.mediaItemUrl} alt=''/>
+                                                  <img src={i.me} alt=''/>
                                                           :
-                                                          <Player style={{width: 100}}
+                                                          <Player
                                                               playsInline
                                                               //poster="/assets/poster.png"
                                                               src={i.mediaItemUrl}

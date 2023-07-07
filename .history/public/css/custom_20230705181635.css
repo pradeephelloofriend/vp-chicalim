@@ -339,13 +339,13 @@ font-weight: bold;
   color: black;
 }
 
-.g-box-content .img-box{
+/* .g-box-content .img-box{
   display: flex;
   justify-content: left;
   gap: 20px;
   flex-wrap: wrap;
   position: relative;
-} 
+} */
 
 .img-tag-box {
   position: relative;

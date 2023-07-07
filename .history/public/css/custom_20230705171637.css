@@ -345,8 +345,7 @@ font-weight: bold;
   gap: 20px;
   flex-wrap: wrap;
   position: relative;
-} 
-
+}
 .img-tag-box {
   position: relative;
   bottom: 35px;
@@ -6250,5 +6249,9 @@ tr td {
 }
 .hb-form .ant-form-item{
   margin-bottom: 12px;
+}
+
+.video_div{
+  margin-left: 290px;
 }
 

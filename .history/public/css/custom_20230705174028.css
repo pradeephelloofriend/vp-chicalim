@@ -344,9 +344,8 @@ font-weight: bold;
   justify-content: left;
   gap: 20px;
   flex-wrap: wrap;
-  position: relative;
-} 
-
+  position: absolute;
+}
 .img-tag-box {
   position: relative;
   bottom: 35px;

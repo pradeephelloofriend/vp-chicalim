@@ -53,11 +53,10 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
                                                   {d.categoryName.name=='photo'? 
                                                   <img src={i.mediaItemUrl} alt=''/>
                                                           :
-                                                          <Player style={{width: 100}}
-                                                              playsInline
-                                                              //poster="/assets/poster.png"
-                                                              src={i.mediaItemUrl}
-                                                          />
+                                                         
+                                                          <div className="video-container">
+                                                            <iframe src="..."></iframe>
+                                                        </div>
                                                   }
                                                   <div className='img-tag-box'>
                                                       <span className="badge centre bg-blue text-white link-c-blue rounded-pill">{i.title}</span>

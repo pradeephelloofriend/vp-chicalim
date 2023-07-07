@@ -47,13 +47,15 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
                           <div className='g-box-content'>
                               
                                   {g.gallery.content.map((d,ix)=>
-                                      <div key={ix} className='img-box'>
+                                      <div key={ix}>
                                               {d.image.map((i,is)=> 
                                               <div className='iv-content' key={is}>
                                                   {d.categoryName.name=='photo'? 
+                                                  <div className='img-box'>
                                                   <img src={i.mediaItemUrl} alt=''/>
+                                                  </div>
                                                           :
-                                                          <Player style={{width: 100}}
+                                                          <Player className='video-data'
                                                               playsInline
                                                               //poster="/assets/poster.png"
                                                               src={i.mediaItemUrl}

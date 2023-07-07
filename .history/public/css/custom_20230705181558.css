@@ -345,8 +345,13 @@ font-weight: bold;
   gap: 20px;
   flex-wrap: wrap;
   position: relative;
-} 
-
+}
+.video-box {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  position: ;
+}
 .img-tag-box {
   position: relative;
   bottom: 35px;
