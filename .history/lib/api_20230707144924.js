@@ -380,6 +380,7 @@ export async function getMediaGalleryData() {
               }
               image {
                 slug
+                sourceUrl
                 mediaItemUrl
               }
             }
@@ -425,8 +426,8 @@ export async function getGalleryByCat(catId) {
                   termTaxonomyId
                 }
                 image {
+                  sourceUrl
                   title
-                  mediaItemUrl
                 }
               }
             }

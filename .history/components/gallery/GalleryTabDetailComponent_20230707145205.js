@@ -57,7 +57,7 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
                                                           <Player
                                                               playsInline
                                                               //poster="/assets/poster.png"
-                                                              src={i.mediaItemUrl}
+                                                              src={i.sourceUrl}
                                                           />
                                                   }
                                                   <div className='img-tag-box'>

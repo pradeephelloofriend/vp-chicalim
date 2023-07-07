@@ -380,6 +380,7 @@ export async function getMediaGalleryData() {
               }
               image {
                 slug
+                sourceUrl
                 mediaItemUrl
               }
             }
