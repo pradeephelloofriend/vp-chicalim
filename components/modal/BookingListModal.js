@@ -27,12 +27,19 @@ const BookingListModal = ({show,onHide}) => {
                     const sArry=[]
                         sTaken.forEach(ex => {
                            const tempData=hbSlot.find((x)=>{return ex==x.termTaxonomyId})
-                           //console.log('tempdata',tempData)
+                        //    console.log('tempdata',tempData)
+
+                           if(tempData!==undefined) {
+                            sArry.push(tempData.name)
+                           }
+                           else {
+                            sArry.push(null)
+                           }
                            
                            /*tempData.forEach(ed => {
                             
                            });*/
-                           sArry.push(tempData.name)
+                           
                             
                         });
 
